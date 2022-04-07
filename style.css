@@ -3,21 +3,35 @@
     padding: 0 0;
 }
 nav{
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(219, 219, 219);
     padding: 40px 0;
 
 }
 footer{
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(219, 219, 219);
     padding: 40px 0;
-    justify-content: center;
+    text-align: center;
+    
 }
 
 .shopping-store{
     display: flex;
     flex-direction: row;
-    margin: 20px 0;
+    margin: 40px 0;
     flex-wrap: nowrap;  
+}
+#button-buy{
+    width: 100px;
+    border-radius:5px;
+    color: aliceblue;
+    background-color: black;
+    padding: 10px 0;
+}
+.container-details select{
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px 5px;
+    background-color: rgb(255, 255, 255);
 }
 .container-img{
     width: 15%;
@@ -32,7 +46,6 @@ footer{
 .container-details{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     width: 300px;
     padding: 0 100px 0 200px;
     justify-content: space-between;
