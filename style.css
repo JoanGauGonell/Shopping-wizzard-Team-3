@@ -1,11 +1,12 @@
+.actual-img {
+    width: 30%;
 }
-.actual-img{
-    width:30%;
-}
-.actual-img img{
+
+.actual-img img {
     width: 300px;
 }
-.container-details{
+
+.container-details {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -13,12 +14,14 @@
     justify-content: space-between;
 
 }
-.shirt-color img{
-    width:25px;
+
+.shirt-color img {
+    width: 25px;
     height: 25px;
     margin: 5px;
 }
-nav a{
+
+nav a {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
@@ -26,12 +29,14 @@ nav a{
     padding: 40px;
     font-weight: 600;
 }
-aside img{
-    width:50px;
+
+aside img {
+    width: 50px;
     justify-content: flex-start;
 }
-aside{
+
+aside {
     display: flex;
     flex-direction: column;
-    
+
 }
