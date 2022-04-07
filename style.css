@@ -1,12 +1,21 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+}
+
 nav{
-    display: flex;
-}
-
-.logo{
+    background-color: rgb(184, 184, 184);
+    padding: 40px 0;
 
 }
-.perfil{
 
+nav a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 40px;
+    font-weight: 600;
 }
 
 .shopping-store{
@@ -25,4 +34,12 @@ nav{
     display: grid;
     grid-template-rows: auto auto auto auto auto;
     background-color: aliceblue;
+}
+
+aside img{
+    width:50px
+}
+aside{
+    display: flex;
+    flex-direction: column;
 }
