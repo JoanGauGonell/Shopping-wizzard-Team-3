@@ -1,0 +1,28 @@
+nav{
+    display: flex;
+}
+
+.logo{
+
+}
+.perfil{
+
+}
+
+.shopping-store{
+    display: flex;
+    justify-content: space-around;
+    background-color: antiquewhite;
+}
+
+.container-img{
+    display:grid;
+    grid-template-columns: 80px auto;
+    background-color: aquamarine;
+}
+
+.container-details{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    background-color: aliceblue;
+}
