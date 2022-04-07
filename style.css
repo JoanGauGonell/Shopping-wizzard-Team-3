@@ -9,6 +9,42 @@ nav{
 
 }
 
+footer{
+    background-color: rgb(184, 184, 184);
+    padding: 40px 0;
+    justify-content: center;
+}
+
+.shopping-store{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    flex-wrap: nowrap; 
+}
+.container-img{
+    width: 15%;
+    margin-left: 100px;
+}
+.actual-img{
+    width:30%;
+}
+.actual-img img{
+    width: 300px;
+}
+.container-details{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 300px;
+    padding: 0 100px 0 200px;
+    justify-content: space-between;
+
+}
+.shirt-color img{
+    width:25px;
+    height: 25px;
+    margin: 5px;
+}
 nav a{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -18,7 +54,7 @@ nav a{
     font-weight: 600;
 }
 
-.shopping-store{
+/* .shopping-store{
     display: flex;
     justify-content: space-around;
     background-color: antiquewhite;
@@ -34,10 +70,11 @@ nav a{
     display: grid;
     grid-template-rows: auto auto auto auto auto;
     background-color: aliceblue;
-}
+} */
 
 aside img{
-    width:50px
+    width:50px;
+    justify-content: flex-start;
 }
 aside{
     display: flex;
