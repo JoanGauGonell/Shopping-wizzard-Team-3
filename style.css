@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-nav{
-    display: flex;
-}
-
-.logo{
-
-}
-.perfil{
-
-}
-
 .shopping-store{
     display: flex;
     justify-content: space-around;
@@ -26,8 +14,4 @@ nav{
     display: grid;
     grid-template-rows: auto auto auto auto auto;
     background-color: aliceblue;
-=======
-* {
-    background-color: bisque;
->>>>>>> 7940eaf11e8b6783cc35d2e2b337b515ae2e41db
 }
