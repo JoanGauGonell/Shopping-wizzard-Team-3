@@ -1,17 +1,37 @@
-.shopping-store{
-    display: flex;
-    justify-content: space-around;
-    background-color: antiquewhite;
 }
-
-.container-img{
-    display:grid;
-    grid-template-columns: 80px auto;
-    background-color: aquamarine;
+.actual-img{
+    width:30%;
 }
-
+.actual-img img{
+    width: 300px;
+}
 .container-details{
-    display: grid;
-    grid-template-rows: auto auto auto auto auto;
-    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 0 100px 0 200px;
+    justify-content: space-between;
+
+}
+.shirt-color img{
+    width:25px;
+    height: 25px;
+    margin: 5px;
+}
+nav a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 40px;
+    font-weight: 600;
+}
+aside img{
+    width:50px;
+    justify-content: flex-start;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    
 }
