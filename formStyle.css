@@ -20,7 +20,7 @@
 .form__button-baseline {
     display: flex;
     justify-content: end;
-    flex-direction: row;
+    /* flex-direction: row; */
     background-color: rgb(220, 219, 219);
     align-items: flex-end;
 }
