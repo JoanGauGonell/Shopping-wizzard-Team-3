@@ -1,6 +1,6 @@
-function show(shown, hidden){
-    document.getElementById(shown).style.display="flex";
-    document.getElementById(hidden).style.display="none";
+function show(shown, hidden) {
+    document.getElementById(shown).style.display = "flex";
+    document.getElementById(hidden).style.display = "none";
 }
 
 const regularExpressionsProfile = {
