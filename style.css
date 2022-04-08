@@ -13,6 +13,7 @@
 }
 
 .container2 {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -60,11 +61,11 @@
 
 /*progressbar connectors*/
 #progressbar li:after {
+    position: absolute;
     content: '';
     width: 100%;
     height: 20px;
     background: rgb(90, 90, 90);
-    position: absolute;
     left: -50%;
     top: 9px;
 }
@@ -200,10 +201,10 @@ aside img {
 
 aside img:hover {
     width: 180px;
-    transform: -webkit-transition: all 0.5s 0s ease;
+    /* transform: -webkit-transition: all 0.5s 0s ease;
     -moz-transition: all 0.5s 0s ease;
     -o-transition: all 0.5s 0s ease;
-    transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease; */
 }
 
 aside {
@@ -221,4 +222,9 @@ button {
     font-family: arial;
     font-weight: 600;
     font-size: 15px;
+}
+
+.address{
+    display: none;
+    flex-direction: column;
 }

@@ -12,15 +12,14 @@
 
 <body>
     <div class="container1">
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#">Logo<a></a>
-            </div>
-            <div class="perfil" id="perfil"></div>
-        </nav>
-    </header>
-    <section>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#">Logo<a></a>
+                </div>
+                <div class="perfil" id="perfil"></div>
+            </nav>
+        </header>
         <div id="Shopping-store" class="shopping-store">
             <div class="container-img">
                 <aside>
@@ -30,7 +29,7 @@
                     <a href="" id="img4"><img src="assets/cami-negra4.jpg" alt=""></a>
                     <a href="" id="img5"><img src="assets/cami-negra5.jpg" alt=""></a>
                 </aside>
-        </div>
+            </div>
             <div class="actual-img">
                 <img src="assets/cami-negra1.jpg" alt="">
             </div>
@@ -64,46 +63,62 @@
                     <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
                     <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
                 </div>
-                <button id="button-buy" onclick="show('Profile', 'Shopping-store')">Buy</button>
+                <button id="button-buy" onclick="show('address', 'Shopping-store')">Buy</button>
             </div>
-
         </div>
-
-        <div id="Profile" class="profile">
+        <!-- <div id="Profile" class="profile">
             <div class="actual-img">
                 <img src="assets/cami-negra1.jpg" alt="">
             </div>
             <button id="button-buy" onclick="show('Shopping-store', 'Profile')">Buy</button>
+        </div> -->
+        <form action="" class="fomulario-address" id="formularioAddress">
+            <div id="address" class="address">
+                <legend>Address</legend>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+                <label for="lastName">Last Name;</label>
+                <input type="text" id="lastName" name="lastName">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday">
+                <label for="address1">Address 1:</label>
+                <input type="text" id="address1" name="address1">
+                <label for="address2">Address 2: </label>
+                <input type="text" id="address2" name="address2">
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode">
+                <label for="country">Country :</label>
+                <datalist id="countries">
+                    <option value="Lando ofe da free">
+                    <option value="Fernando">
+                    <option value="Marrocos">
+                    <option value="China">
+                    <option value="Star wars">
+                </datalist>
+                <input type="countries" id="country" name="country">
+                <label for="phone">Phone :</label>
+                <input type="number">
+                <button id="button-buy" onclick="show('Shopping-store', 'address')">Buy</button>
+            </div>
+        </form>
+
+        <div id="progressBar" class="container2">
+            <header>
+                <div>
+                    <ul id="progressbar">
+                        <li class="active">Profile</li>
+                        <li>Address</li>
+                        <li>Shipping</li>
+                        <li>Finish</li>
+                    </ul>
+                </div>
+            </header>
         </div>
-    </section>
         <footer>
             <h4>Shop 2022</h4>
         </footer>
     </div>
-    <div class="container2">
-        <header>
-            <div>
-                <ul id="progressbar">
-                    <li class="active">Profile</li>
-                    <li>Address</li>
-                    <li>Shipping</li>
-                    <li>Finish</li>
-                  </ul>
-                </div>
-        </header>
-        <section>
-            <form class="profile-form" action="POST">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
-                <label for="repeat-password">Confirm Password</label>
-                <input type="password" name="password" id="repeat-password">
-            </form>
-        </section>
-    </div>
+
 </body>
 
 </html>
