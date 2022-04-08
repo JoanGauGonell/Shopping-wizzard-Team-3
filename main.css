@@ -210,26 +210,5 @@ aside img:hover {
 aside {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD:style.css
-
-}
-
-h4 {
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-button {
-    font-family: arial;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.address{
-    display: none;
-    flex-direction: column;
-}
-=======
     
 }
->>>>>>> Alejandro:main.css
