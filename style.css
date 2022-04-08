@@ -1,49 +1,57 @@
-*{
+* {
     margin: 0 0;
     padding: 0 0;
 }
-nav{
+
+nav {
     background-color: rgb(219, 219, 219);
     padding: 40px 0;
 
 }
-footer{
+
+footer {
     background-color: rgb(219, 219, 219);
     padding: 40px 0;
     text-align: center;
-    
+
 }
 
-.shopping-store{
+.shopping-store {
     display: flex;
     flex-direction: row;
     margin: 40px 0;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
 }
-#button-buy{
+
+#button-buy {
     width: 100px;
-    border-radius:5px;
+    border-radius: 5px;
     color: aliceblue;
     background-color: black;
     padding: 10px 0;
 }
-.container-details select{
+
+.container-details select {
     border: 2px solid black;
     border-radius: 4px;
     padding: 5px 5px;
     background-color: rgb(255, 255, 255);
 }
-.container-img{
+
+.container-img {
     width: 15%;
     margin-left: 100px;
 }
-.actual-img{
-    width:30%;
+
+.actual-img {
+    width: 30%;
 }
-.actual-img img{
+
+.actual-img img {
     width: 300px;
 }
-.container-details{
+
+.container-details {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -51,12 +59,14 @@ footer{
     justify-content: space-between;
 
 }
-.shirt-color img{
-    width:25px;
+
+.shirt-color img {
+    width: 25px;
     height: 25px;
     margin: 5px;
 }
-nav a{
+
+nav a {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
@@ -64,12 +74,14 @@ nav a{
     padding: 40px;
     font-weight: 600;
 }
-aside img{
-    width:50px;
+
+aside img {
+    width: 50px;
     justify-content: flex-start;
 }
-aside{
+
+aside {
     display: flex;
     flex-direction: column;
-    
+
 }
