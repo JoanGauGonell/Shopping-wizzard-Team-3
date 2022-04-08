@@ -1,0 +1,235 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.container1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+}
+
+.container2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    /* background-color: brown; */
+}
+
+#progressbar {
+    /* margin-top: 30px; */
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    /* counter-reset: step; */
+    background-color: rgb(240, 240, 240);
+    padding: 40px 0;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: rgb(2, 2, 2);
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    width: 23.33%;
+    float: left;
+    position: relative;
+    text-align: center;
+    /* z-index: 1; */
+}
+
+#progressbar li:before {
+    position: relative;
+    content: counter(step);
+    counter-increment: step;
+    width: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: rgb(240, 231, 231);
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+    z-index: 1;
+
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 20px;
+    background: rgb(90, 90, 90);
+    left: -50%;
+    top: 9px;
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #000;
+    color: rgb(3, 3, 3);
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 50px;
+}
+
+.profile-form input {
+    width: 300px;
+    padding: 7px;
+    margin: 30px 90px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: arial;
+}
+
+.profile-form label {
+    margin: 0px 90px;
+}
+
+nav {
+    background-color: rgb(219, 219, 219);
+    padding: 40px 0;
+
+}
+
+footer {
+    background-color: rgb(219, 219, 219);
+    padding: 40px 0;
+    text-align: center;
+
+}
+
+.shopping-store {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+    flex-wrap: nowrap;
+}
+
+#button-buy {
+    width: 100px;
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: black;
+    padding: 15px 15px;
+}
+
+.container-details select {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px 5px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container-img {
+    width: 15%;
+    margin-left: 100px;
+}
+
+.actual-img {
+    width: 30%;
+}
+
+.actual-img img {
+    width: 500px;
+}
+
+.container-details {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 0 00px 0 200px;
+    justify-content: space-between;
+
+}
+
+.shirt-color img {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 40px;
+    font-weight: 600;
+}
+
+aside img {
+    width: 30px;
+    justify-content: flex-start;
+    padding: 4px 0;
+}
+
+aside img:hover {
+    width: 180px;
+    /* transform: -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease; */
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+<<<<<<< HEAD:style.css
+
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+button {
+    font-family: arial;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.address{
+    display: none;
+    flex-direction: column;
+}
+=======
+    
+}
+>>>>>>> Alejandro:main.css
