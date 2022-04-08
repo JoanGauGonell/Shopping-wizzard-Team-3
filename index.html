@@ -8,6 +8,7 @@
     <title>Shopping wizzard</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -98,6 +99,53 @@
                 <label for="repeat-password">Confirm Password</label>
                 <input type="password" name="password" id="repeat-password">
             </form>
+        </section>
+    </div>
+    <div class="container5">
+        <header>
+            <div>
+                <ul id="progressbar">
+                    <li>Profile</li>
+                    <li>Address</li>
+                    <li class="active">Shipping</li>
+                    <li>Finish</li>
+                  </ul>
+                </div>
+        </header>
+        <section>
+            <div class="sideright">
+                <h2 class="sh">Shipping</h2>
+                <h1 class="sh">Shipping type</h1>
+                <form class="formshipping" action="GET">
+                <div class="inputalign">
+                    <input type="radio" name="shipment" id="shipfree">
+                    <label for="shipfree">Free shipment(72H)</label>
+                </div>
+                <div class="inputalign">
+                    <input type="radio" name="shipment" id="shipextra">
+                    <label for="shipextra">Extra shipping (48H)  <B>4,99€</B></label>
+                </div>
+                <div class="inputalign">                
+                    <input type="radio" name="shipment" id="premium">
+                    <label for="premium">Premium (24H) <b>9,99€</b></label></div>
+                <div class="inputalign">                
+                    <input type="checkbox" name="gift" id="gift">
+                    <label for="gift">Is it a gift?</label>
+                </div>
+                <label for="giftmsg">Gift message</label>
+                <textarea name="giftmsg" id="giftmsg" cols="30" rows="10"></textarea>
+                <p>Gift wrapper image</p>
+                <label for="selectimg" class="selectimg">Select image <i class="fa-light fa-file"></i></label>
+                <input type="file" name="selectimg" id="selectimg">
+            </form>
+            
+            </div>
+            <footer>
+                <div class="footerbuttons">
+                <button id="clearform">Clear form</button>
+                <input type="submit" value="Next" id="next">
+            </div>
+            </footer>
         </section>
     </div>
 </body>
