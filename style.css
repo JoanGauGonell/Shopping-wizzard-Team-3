@@ -231,6 +231,19 @@ button{
         margin-top: 20px;
         margin-bottom: 80px;
     }
+    .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sideleft{
+        border: 2px solid rgb(172, 172, 172);
+        margin-top: 50px;
+        margin-right: 20%;
+        padding: 50px;
+        height: fit-content;
+        background-color: rgb(230, 230, 230);
+    }
     label[for="selectimg"] {
         font-size: 20px;
         font-weight: 600;
@@ -247,7 +260,7 @@ button{
             margin-left: 20px;
         }
         .sideright{
-            margin-left: 100px
+            margin-left: 300px
         }
         #clearform{
             background-color: white;
