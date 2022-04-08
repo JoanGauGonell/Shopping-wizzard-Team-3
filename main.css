@@ -210,6 +210,7 @@ aside img:hover {
 aside {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD:style.css
 
 }
 
@@ -228,3 +229,7 @@ button {
     display: none;
     flex-direction: column;
 }
+=======
+    
+}
+>>>>>>> Alejandro:main.css

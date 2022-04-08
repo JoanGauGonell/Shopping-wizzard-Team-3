@@ -1,0 +1,65 @@
+/* general style for the form */
+.form-profile {
+    padding: 0 0;
+    margin: 0 0;
+    text-decoration: none;
+    max-height: 10rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+.title {
+    margin-left: 11px;
+}
+
+.form__button-baseline {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    background-color: rgb(220, 219, 219);
+}
+/* text style */
+.form__label{
+    font-size: 11px;
+}
+.form__input-error {
+    font-size: 11px;
+}
+.form__mesage p{
+    font-size: 13px;
+    text-align: center;
+    margin-top: 1rem;
+}
+/* form inputs style */
+.form__user-input input {
+    border: 1.3px solid black;
+    border-radius: 3px;
+}
+ .form__user-input input::-webkit-input-placeholder{
+    font-size: 10px;
+    padding-left: 3px;
+}
+/* form groups */
+.form__group {
+    margin: 12px;
+}
+
+/* buttons baseline style */
+.form__btn-clear {
+    width: 85px;
+    height: 25px;
+    border: 1.3px solid black;
+    border-radius: 4px;
+}
+
+.form__btn-next {
+    background-color: black;
+    color: white;
+    border: 1.3px solid black;
+    border-radius: 4px;
+    height: 25px;
+    width: 60px;
+}
