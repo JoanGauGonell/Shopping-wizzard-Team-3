@@ -1,6 +1,7 @@
 function show(shown, hidden) {
     document.getElementById(shown).style.display = "flex";
     document.getElementById(hidden).style.display = "none";
+    document.querySelector('footer').style.display = "none";
     // document.getElementById('progressBar').style.display = "initial";//shows the progress bar needs to be reset somewhere
 }
 

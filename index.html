@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="formStyle.css">
     <script src="main.js" defer></script>
-    <script src="form.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -22,74 +22,60 @@
             <div class="perfil" id="perfil"></div>
         </nav>
     </header>
-    <section hidden>
-        <div class="shopping-store">
-            <div class="container-img">
-                <aside>
-                    <a href="" id="img1"><img src="assets/cami-negra1.jpg" alt=""></a>
-                    <a href="" id="img2"><img src="assets/cami-negra2.jpg" alt=""></a>
-                    <a href="" id="img3"><img src="assets/cami-negra3.jpg" alt=""></a>
-                    <a href="" id="img4"><img src="assets/cami-negra4.jpg" alt=""></a>
-                    <a href="" id="img5"><img src="assets/cami-negra5.jpg" alt=""></a>
-                </aside>
-            </div>
-            <div class="actual-img">
-                <img src="assets/cami-negra1.jpg" alt="">
-            </div>
-            <div class="container-details">
-                <h2><span id="colorString">Brown</span> t-shirt</h2>
-                <p>Price</p>
-                <h2>14,55€</h2>
-                <label for="shirtsize">Size</label>
-                <select name="Size" id="shirtsize">
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                </select>
-                <p>Color:</p>
-                <div class="shirt-color">
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                    <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
-                </div>
-                <button id="button-buy" onclick="show('address', 'Shopping-store')">Buy</button>
-            </div>
+    <div class="shopping-store" id="shopping-store">
+        <div class="container-img">
+            <aside>
+                <a href="" id="img1"><img src="assets/cami-negra1.jpg" alt=""></a>
+                <a href="" id="img2"><img src="assets/cami-negra2.jpg" alt=""></a>
+                <a href="" id="img3"><img src="assets/cami-negra3.jpg" alt=""></a>
+                <a href="" id="img4"><img src="assets/cami-negra4.jpg" alt=""></a>
+                <a href="" id="img5"><img src="assets/cami-negra5.jpg" alt=""></a>
+            </aside>
         </div>
-        <!-- <div id="Profile" class="profile">
-            <div class="actual-img">
-                <img src="assets/cami-negra1.jpg" alt="">
+        <div class="actual-img">
+            <img src="assets/cami-negra1.jpg" alt="">
+        </div>
+        <div class="container-details">
+            <h2><span id="colorString">Brown</span> t-shirt</h2>
+            <p>Price</p>
+            <h2>14,55€</h2>
+            <label for="shirtsize">Size</label>
+            <select name="Size" id="shirtsize">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+            <p>Color:</p>
+            <div class="shirt-color">
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
+                <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
             </div>
-            <button id="button-buy" onclick="show('Shopping-store', 'Profile')">Buy</button>
-        </div> -->
-        <!-- <div id="progressBar" class="container2">
-            <header>
-                <div>
-                    <ul id="progressbar">
-                        <li class="active">Profile</li>
-                        <li>Address</li>
-                        <li>Shipping</li>
-                        <li>Finish</li>
-                    </ul>
-                </div>
-            </header>
-        </div> -->
-    </section>
+            <button id="button-buy" onclick="show('form-profile', 'shopping-store')">Buy</button>
+        </div>
 
-    <div class="form-profile" hidden>
+    </div>
+
+    <footer>
+        <h4>SHOP 2034</h4>
+    </footer>
+
+
+    <div class="form-profile" id='form-profile'>
         <form action="" class="form" id="form">
             <h2 class="title">Profile</h2>
             <!-- group: username -->
@@ -139,7 +125,8 @@
                 <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Please complete the form!!</p>
             </div>
         </form>
-        <!-- container for the buttons -->
+    </div>
+            <!-- container for the buttons -->
         <div class="form__button-baseline">
             <!-- button clear form delete value -->
             <div class="form__group form__group-btn-clear">
@@ -147,13 +134,13 @@
             </div>
             <!-- button next -->
             <div class="form__group form__group-btn-next">
-                <button type="submit" class="form__btn-next" onclick="show('address', 'form')">Next</button>
+                <button type="submit" class="form__btn-next"
+                    onclick="show('Shopping-store', 'form-profile')">Next</button>
             </div>
         </div>
-    </div>
 
 
-    <div class="form-address">
+    <div class="form-address" hidden>
         <form action="" class="form" id="form">
             <div id="address" class="address">
                 <h2 class="title">Profile</h2>
@@ -269,9 +256,48 @@
         </div>
     </div>
 
-    <footer hidden>
-        <h4>Shop 2022</h4>
-    </footer>
+    <div class="form-Shipping" hidden>
+        <ul id="progressbar">
+            <li>Profile</li>
+            <li>Address</li>
+            <li class="active">Shipping</li>
+            <li>Finish</li>
+        </ul>
+        <section class="content" hidden>
+            <div class="sideleft">
+                <h2 class="sh">Shipping</h2>
+                <h1 class="sh">Shipping type</h1>
+                <form class="formshipping" action="GET">
+                    <div class="inputalign">
+                        <input type="radio" name="shipment" id="shipfree">
+                        <label for="shipfree">Free shipment(72H)</label>
+                    </div>
+                    <div class="inputalign">
+                        <input type="radio" name="shipment" id="shipextra">
+                        <label for="shipextra">Extra shipping (48H) <B>4,99€</B></label>
+                    </div>
+                    <div class="inputalign">
+                        <input type="radio" name="shipment" id="premium">
+                        <label for="premium">Premium (24H) <b>9,99€</b></label></div>
+                    <div class="inputalign">
+                        <input type="checkbox" name="gift" id="gift">
+                        <label for="gift">Is it a gift?</label>
+                    </div>
+                    <label for="giftmsg">Gift message</label>
+                    <textarea name="giftmsg" id="giftmsg" cols="30" rows="10"></textarea>
+                    <p>Gift wrapper image</p>
+                    <label for="selectimg" class="selectimg">Select image <i class="fa-light fa-file"></i></label>
+                    <input type="file" name="selectimg" id="selectimg">
+                </form>
+            </div>
+            <div class="sideright">
+                <p>You started registering</p>
+                <p><b><span id="time"></span></b><b>minutes ago.</b></p>
+                <br>
+                <p>Hurry up!</p>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

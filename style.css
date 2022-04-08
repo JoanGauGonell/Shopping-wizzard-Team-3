@@ -1,0 +1,329 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+/* .container1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    display: none;
+} */
+
+/* .container2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: brown;
+} */
+
+#progressbar {
+    /* margin-top: 30px; */
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    /* counter-reset: step; */
+    background-color: rgb(240, 240, 240);
+    padding: 40px 0;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: rgb(2, 2, 2);
+    /* text-transform: uppercase; */
+    font-size: 20px;
+    width: 23.33%;
+    float: left;
+    position: relative;
+    text-align: center;
+    /* z-index: 1; */
+}
+
+#progressbar li:before {
+    position: relative;
+    content: counter(step);
+    counter-increment: step;
+    width: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: rgb(240, 231, 231);
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+    z-index: 1;
+
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 20px;
+    background: rgb(90, 90, 90);
+    position: absolute;
+    left: -50%;
+    top: 9px;
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #000;
+    color: rgb(3, 3, 3);
+}
+
+/* .profile-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 50px;
+} */
+
+/* .profile-form input {
+    width: 300px;
+    padding: 7px;
+    margin: 30px 90px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: arial;
+} */
+
+/* .profile-form label {
+    margin: 0px 90px;
+} */
+
+nav {
+    background-color: rgb(219, 219, 219);
+    padding: 40px 0;
+
+}
+
+footer {
+    background-color: rgb(219, 219, 219);
+    padding: 40px 0;
+    text-align: center;
+
+}
+
+.shopping-store {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+    flex-wrap: nowrap;
+}
+
+#button-buy {
+    width: 100px;
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: black;
+    padding: 15px 15px;
+}
+
+.container-details select {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 10px 5px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.container-img {
+    width: 15%;
+    margin-left: 100px;
+}
+
+.actual-img {
+    width: 30%;
+}
+
+.actual-img img {
+    width: 500px;
+}
+
+.container-details {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 0 00px 0 200px;
+    justify-content: space-between;
+
+}
+
+.shirt-color img {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    padding: 40px;
+    font-weight: 600;
+}
+
+aside img {
+    width: 30px;
+    justify-content: flex-start;
+    padding: 4px 0;
+}
+
+aside img:hover {
+    width: 180px;
+    /* transform: -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease; */
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    font-family: arial;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.sideright {
+    display: flex;
+    flex-direction: column;
+}
+
+.sideright form {
+    display: flex;
+    flex-direction: column;
+}
+
+#selectimg {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#giftmsg {
+    width: 400px;
+    border: 2px black solid;
+    resize: none;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sh {
+    margin: 20px 0;
+}
+
+.formshipping input {
+    margin-bottom: 30px;
+}
+
+.formshipping textarea {
+    margin: 20px 0;
+}
+
+.selectimg {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sideright {
+    border: 2px solid rgb(172, 172, 172);
+    margin-top: 50px;
+    margin-right: 20%;
+    padding: 50px;
+    height: fit-content;
+    background-color: rgb(230, 230, 230);
+}
+
+label[for="selectimg"] {
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px black solid;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 15px 40px !important;
+    width: 300px;
+    text-align: center;
+}
+
+.inputalign label {
+    margin-left: 20px;
+}
+
+.sideleft {
+    margin-left: 300px
+}
+
+#clearform {
+    background-color: white;
+    padding: 10px 30px;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+.footerbuttons {
+    position: absolute;
+    right: 50px;
+}
+
+#next {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 11px 40px;
+    border: 2px black solid;
+    border-radius: 5px;
+    margin-left: 30px;
+    align-items: right;
+}
