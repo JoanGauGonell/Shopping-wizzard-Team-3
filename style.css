@@ -236,7 +236,7 @@ button{
         flex-direction: row;
         justify-content: space-between;
     }
-    .sideleft{
+    .sideright{
         border: 2px solid rgb(172, 172, 172);
         margin-top: 50px;
         margin-right: 20%;
@@ -259,7 +259,7 @@ button{
         .inputalign label{
             margin-left: 20px;
         }
-        .sideright{
+        .sideleft{
             margin-left: 300px
         }
         #clearform{
