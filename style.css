@@ -85,3 +85,7 @@ aside {
     flex-direction: column;
 
 }
+
+.profile{
+    display:none;
+}

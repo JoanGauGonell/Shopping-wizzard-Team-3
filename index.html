@@ -20,7 +20,7 @@
         </nav>
     </header>
     <section>
-        <div class="shopping-store">
+        <div id="Shopping-store" class="shopping-store">
             <div class="container-img">
                 <aside>
                     <a href="" id="img1"><img src="assets/cami-negra1.jpg" alt=""></a>
@@ -63,9 +63,16 @@
                     <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
                     <a href=""> <img src="assets/cami-negra1.jpg" alt=""> </a>
                 </div>
-                <button id="button-buy">Buy</button>
+                <button id="button-buy" onclick="show('Profile', 'Shopping-store')">Buy</button>
             </div>
 
+        </div>
+
+        <div id="Profile" class="profile">
+            <div class="actual-img">
+                <img src="assets/cami-negra1.jpg" alt="">
+            </div>
+            <button id="button-buy" onclick="show('Shopping-store', 'Profile')">Buy</button>
         </div>
     </section>
     <footer>
