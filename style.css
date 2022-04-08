@@ -1,51 +1,93 @@
+<<<<<<< HEAD
 *{
+=======
+* {
+>>>>>>> master
     margin: 0 0;
     padding: 0 0;
 }
 
+<<<<<<< HEAD
 nav{
     background-color: rgb(184, 184, 184);
+=======
+nav {
+    background-color: rgb(219, 219, 219);
+>>>>>>> master
     padding: 40px 0;
 
 }
 
+<<<<<<< HEAD
 footer{
     background-color: rgb(184, 184, 184);
     padding: 40px 0;
     justify-content: center;
+=======
+footer {
+    background-color: rgb(219, 219, 219);
+    padding: 40px 0;
+    text-align: center;
+
+>>>>>>> master
 }
 
-.shopping-store{
+.shopping-store {
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     margin: 20px 0;
     flex-wrap: nowrap; 
+=======
+    margin: 40px 0;
+    flex-wrap: nowrap;
 }
-.container-img{
+
+#button-buy {
+    width: 100px;
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: black;
+    padding: 10px 0;
+}
+
+.container-details select {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px 5px;
+    background-color: rgb(255, 255, 255);
+>>>>>>> master
+}
+
+.container-img {
     width: 15%;
     margin-left: 100px;
 }
-.actual-img{
-    width:30%;
+
+.actual-img {
+    width: 30%;
 }
-.actual-img img{
+
+.actual-img img {
     width: 300px;
 }
-.container-details{
+
+.container-details {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     width: 300px;
     padding: 0 100px 0 200px;
     justify-content: space-between;
 
 }
-.shirt-color img{
-    width:25px;
+
+.shirt-color img {
+    width: 25px;
     height: 25px;
     margin: 5px;
 }
-nav a{
+
+nav a {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
@@ -54,6 +96,7 @@ nav a{
     font-weight: 600;
 }
 
+<<<<<<< HEAD
 /* .shopping-store{
     display: flex;
     justify-content: space-around;
@@ -74,9 +117,18 @@ nav a{
 
 aside img{
     width:50px;
+=======
+aside img {
+    width: 50px;
+>>>>>>> master
     justify-content: flex-start;
 }
-aside{
+
+aside {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 }
