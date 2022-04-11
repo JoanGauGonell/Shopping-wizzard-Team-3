@@ -5,14 +5,16 @@
     text-decoration: none;
     max-height: 10rem;
     display: none;
-    border: 1px solid black;
 }
+
+
 
 .form {
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem;
     margin-top: 3rem;
+    margin-left: 1rem;
 }
 
 .title {
@@ -22,7 +24,6 @@
 .form__button-baseline {
     display: flex;
     justify-content: end;
-    /* flex-direction: row; */
     background-color: rgb(220, 219, 219);
     align-items: flex-end;
 }
@@ -39,21 +40,39 @@
 .form__input-error {
     font-size: 11px;
     margin-bottom: 0;
-    display: none; 
+    display: none;
 }
 .form__input-error-activo {
     display: block;
 }
-.form__mesage p {
-    font-size: 13px;
+.form__mesage  {
+    font-size: 18px;
     text-align: center;
     margin-top: 1rem;
+    width: 100%;
+    background-color: #bb2929 ;
+    border-radius: 3px;
+    box-shadow: 3px 0px 15px rgba(163, 163, 163, 0.4);
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    display: none;
+}
+
+.form__mesage p {
+    margin: 0;
+}
+.form__mesage-activo {
+    display: block;
 }
 
 /* icons inputs "X" */
 .form__validation-state {
     position: absolute;
-    left: 140px;
+    left: 200px;
+    margin-top: 5.5px;
+    z-index: 100;
+    opacity: 0;
 }
 /* form inputs style */
 .form__user-input input {
@@ -63,19 +82,19 @@
     line-height: 45px;
     padding: 0 40px 0 10px;
 }
-.form__input:focus {
+.form__user-input input:focus {
     border: 3px solid #0075ff;
-    outline: none;
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    outline: none;
 }
 .form__user-input input {
-    border: 1.3px solid black;
+    border: 1px solid;
     border-radius: 3px;
 }
 
 .form__user-input input::-webkit-input-placeholder {
     font-size: 10px;
-    padding-left: 3px;
+    padding-left: 1px;
 }
 
 /* form groups */
@@ -99,3 +118,15 @@
     height: 25px;
     width: 60px;
 }
+
+/* form validations */
+.form__group-correct .form__validation-state {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.form__group-incorrect .form__validation-state {
+    color: #bb2929;
+    opacity: 1;
+}
+

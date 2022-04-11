@@ -10,7 +10,7 @@
 /* container style of the main  */
 .shopping-store {
     display: grid;
-    grid-template-columns: 0.1fr 1fr 2.1fr;
+    grid-template-columns: 0.1fr 0.8fr 3fr;
     gap: 10px;
     margin: 70px;
 }
@@ -43,8 +43,8 @@ footer {
 }
 
 .small-img img {
-    /* transition: 0.5s; */
-    border: 1.5px solid orange;
+    margin: 3px;
+    border: 1px solid #17202A;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 80px;
 }
