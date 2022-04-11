@@ -1,5 +1,25 @@
-/* general style for the form */
+/* general style for the profile form */
 .form-profile {
+    padding: 0 0;
+    margin: auto;
+    text-decoration: none;
+    max-height: 10rem;
+    display: none;
+    border: 1px solid black;
+}
+
+/* general style for the address form */
+.form-address {
+    padding: 0 0;
+    margin: auto;
+    text-decoration: none;
+    max-height: 10rem;
+    display: none;
+    border: 1px solid black;
+}
+
+/* general style for the shipping form */
+.form-shipping {
     padding: 0 0;
     margin: auto;
     text-decoration: none;
@@ -44,7 +64,7 @@
 .form__input-error-activo {
     display: block;
 }
-.form__mesage p {
+.form__message p {
     font-size: 13px;
     text-align: center;
     margin-top: 1rem;

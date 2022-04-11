@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="nav-header">
+    <nav class="nav-header" id='nav-header'>
         <div class="logo">
             <a href="#">Logo<a></a>
         </div>
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id='footer'>
         <h4>SHOP 2034</h4>
     </footer>
 
@@ -90,7 +90,7 @@
             </ul>
         </nav>
 
-        <form action="" class="form" id="form">
+        <form action="" class="profile" id="profile">
             <h2 class="title">Profile</h2>
             <!-- group: username -->
             <div class="form__group" id="group__user">
@@ -135,15 +135,16 @@
             </div>
 
             <!-- button and errors form -->
-            <div class="form__mesage" id="form__mesage">
+            <div class="form__message" id="form__message">
                 <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Please complete the form!!</p>
             </div>
         </form>
+
         <!-- container for the buttons -->
         <div class="form__button-baseline">
             <!-- button clear form delete value -->
             <div class="form__group form__group-btn-clear">
-                <button type="delete" class="form__btn-clear">Clear form</button>
+                <button id="resetProfile" class="form__btn-clear">Clear form</button>
             </div>
             <!-- button next -->
             <div class="form__group form__group-btn-next">
@@ -151,153 +152,150 @@
                     onclick="show('form-address', 'form-profile')">Next</button>
             </div>
         </div>
+
     </div>
 
-    <div class="form-address" id='form-address' hidden>
-
-        <nav class="form-header"></nav>
-        <ul id="progressbar">
-            <li class="active">Profile</li>
-            <li class="active">Address</li>
-            <li>Shipping</li>
-            <li>Finish</li>
-        </ul>
+    <div class="form-address" id='form-address'>
+        <nav class="form-header">
+            <ul id="progressbar">
+                <li class="active">Profile</li>
+                <li class="active">Address</li>
+                <li>Shipping</li>
+                <li>Finish</li>
+            </ul>
         </nav>
 
-        <form action="" class="form" id="form">
-            <div id="address" class="address">
-                <h2 class="title">Profile</h2>
-                <!-- group: First Name -->
-                <div class="form__group" id="group__firstName">
-                    <label for="firstName" class="form__label">First Name :</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="firstName" id="firstName"
-                            placeholder="Alejandro Gaerste" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+        <form action="" class="address" id="address">
+            <!-- <div id="address" class="address"> -->
+            <h2 class="title">Address</h2>
+            <!-- group: First Name -->
+            <div class="form__group" id="group__firstName">
+                <label for="firstName" class="form__label">First Name :</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="firstName" id="firstName"
+                        placeholder="Alejandro Gaerste">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+            </div>
 
-                <!-- group: Last Name -->
-                <div class="form__group" id="group__lastName">
-                    <label for="lastName" class="form__label">Last Name</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="lastName" id="lastName"
-                            placeholder="Alejandro Gaerste" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+            <!-- group: Last Name -->
+            <div class="form__group" id="group__lastName">
+                <label for="lastName" class="form__label">Last Name</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="lastName" id="lastName" placeholder="Alejandro Gaerste">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+            </div>
 
-                <!-- group:  Birthday-->
-                <div class="form__group" id="group__birthday">
-                    <label for="birthday" class="form__label">Birthday</label>
-                    <div class="form__user-input">
-                        <input type="date" class="form-input" name="birthday" id="birthday" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <!-- <p class="form__input-error"></p> -->
+            <!-- group:  Birthday-->
+            <div class="form__group" id="group__birthday">
+                <label for="birthday" class="form__label">Birthday</label>
+                <div class="form__user-input">
+                    <input type="date" class="form-input" name="birthday" id="birthday">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <!-- <p class="form__input-error"></p> -->
+            </div>
 
-                <!-- group:  Address 1-->
-                <div class="form__group" id="group__address1">
-                    <label for="address1" class="form__label">Address 1</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="address1" id="address1"
-                            placeholder="Rua da street 210" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            <!-- group:  Address 1-->
+            <div class="form__group" id="group__address1">
+                <label for="address1" class="form__label">Address 1</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="address1" id="address1" placeholder="Rua da street 210">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            </div>
 
-                <!-- group:  Address 2-->
-                <div class="form__group" id="group__address2">
-                    <label for="address2" class="form__label">Address 2</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="address2" id="address2"
-                            placeholder="Rua da street 210">
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            <!-- group:  Address 2-->
+            <div class="form__group" id="group__address2">
+                <label for="address2" class="form__label">Address 2</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="address2" id="address2" placeholder="Rua da street 210">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            </div>
 
-                <!-- group:  Postal Code-->
-                <div class="form__group" id="group__postalCode">
-                    <label for="postalCode" class="form__label">Postal Code</label>
-                    <div class="form__user-input">
-                        <input type="number" class="form-input" name="postalCode" id="postalCode" placeholder="21000">
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have uo to 5 digits and no empty spaces</p>
+            <!-- group:  Postal Code-->
+            <div class="form__group" id="group__postalCode">
+                <label for="postalCode" class="form__label">Postal Code</label>
+                <div class="form__user-input">
+                    <input type="number" class="form-input" name="postalCode" id="postalCode" placeholder="21000">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have uo to 5 digits and no empty spaces</p>
+            </div>
 
-                <!-- group:  Country-->
-                <div class="form__group" id="group__country">
-                    <label for="country" class="form__label">Country</label>
-                    <div class="form__user-input">
-                        <select id="countries" name='country' required>
-                            <option value="Andorra">Andorra</option>
-                            <option value="España">España</option>
-                            <option value="Francia">Francia</option>
-                            <option value="Alemania">Alemania</option>
-                            <option value="Grecia">Grecia</option>
-                        </select>
+            <!-- group:  Country-->
+            <div class="form__group" id="group__country">
+                <label for="country" class="form__label">Country</label>
+                <div class="form__user-input">
+                    <select id="countries" name='country'>
+                        <option value="Andorra">Andorra</option>
+                        <option value="España">España</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="Grecia">Grecia</option>
+                    </select>
 
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                </div>
-
-                <!-- group:  Phone-->
-                <div class="form__group" id="group__phone">
-                    <label for="phone" class="form__label">Phone</label>
-                    <div class="form__user-input">
-                        <select id="countries" name='country' required>
-                            <option value="AND">+376</option>
-                            <option value="ESP">+34</option>
-                            <option value="FRA">+33</option>
-                            <option value="DEU">+49</option>
-                            <option value="GRC">+30</option>
-                        </select>
-                        <input type="tel" class="form-input" name="phone" id="phone"
-                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Heyo chica tú número">
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div><br>
-                    <!-- <p class="form__input-error">The user must have 9 digits and no empty spaces</p> -->
-                    <label for="regular-address"> This is my regular address</label>
-                    <input type="checkbox" id="regular-address" name="regular-address" value="regular-address">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
             </div>
+
+            <!-- group:  Phone-->
+            <div class="form__group" id="group__phone">
+                <label for="phone" class="form__label">Phone</label>
+                <div class="form__user-input">
+                    <select id="countries" name='country' required>
+                        <option value="AND">+376</option>
+                        <option value="ESP">+34</option>
+                        <option value="FRA">+33</option>
+                        <option value="DEU">+49</option>
+                        <option value="GRC">+30</option>
+                    </select>
+                    <input type="tel" class="form-input" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                        placeholder="Heyo chica tú número">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+                </div><br>
+                <!-- <p class="form__input-error">The user must have 9 digits and no empty spaces</p> -->
+                <label for="regular-address"> This is my regular address</label>
+                <input type="checkbox" id="regular-address" name="regular-address" value="regular-address">
+            </div>
         </form>
+
         <!-- container for the buttons -->
         <div class="form__button-baseline">
             <!-- button clear form delete value -->
             <div class="form__group form__group-btn-clear">
-                <button type="reset" class="form__btn-clear">Clear form</button>
+                <button id="resetAddress" class="form__btn-clear">Clear form</button>
             </div>
             <!-- button next -->
             <div class="form__group form__group-btn-next">
-                <button type="submit" class="form__btn-next"
-                    onclick="show('form-shipping', 'form-address')">Next</button>
+                <button type="submit" class="form__btn-next" onclick="show('form-shipping', 'form-address')">Next</button>
             </div>
         </div>
+
     </div>
 
-    <div class="form-shipping" id='form-shipping' hidden>
+    <div class="form-shipping" id='form-shipping'>
 
-        <nav class="form-header"></nav>
-        <ul id="progressbar">
-            <li class="active">Profile</li>
-            <li class="active">Address</li>
-            <li class="active">Shipping</li>
-            <li>Finish</li>
-        </ul>
+        <nav class="form-header">
+            <ul id="progressbar">
+                <li class="active">Profile</li>
+                <li class="active">Address</li>
+                <li class="active">Shipping</li>
+                <li>Finish</li>
+            </ul>
         </nav>
 
         <section class="content">
             <div class="sideleft">
                 <h2 class="sh">Shipping</h2>
                 <h1 class="sh">Shipping type</h1>
-                <form class="formshipping" action="GET">
+                <form class="formshipping" id="form" action="GET">
                     <div class="inputalign">
                         <input type="radio" name="shipment" id="shipfree">
                         <label for="shipfree">Free shipment(72H)</label>
@@ -329,15 +327,6 @@
                 <p>Hurry up!</p>
             </div>
         </section>
-        <footer class="footer_shipping">
-            <div class="form__group form__group-btn-clear">
-                <button type="delete" class="form__btn-clear">Clear form</button>
-            </div>
-            <!-- button next -->
-            <div class="form__group form__group-btn-next">
-                <button type="submit" class="form__btn-next">Next</button>
-            </div>
-        </footer>
     </div>
 
 </body>

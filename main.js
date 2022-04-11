@@ -1,14 +1,23 @@
+
+document.querySelector('#resetProfile').addEventListener.onclick(resetForm('#profile'));
+document.querySelector('#resetAddress').addEventListener.onclick(resetForm('#address'));
+
 function show(shown, hidden) {
-    document.getElementById(shown).style.display = "grid"; //flex or grid, that is the question
+    document.getElementById(shown).style.display = "grid";
     document.getElementById(hidden).style.display = "none";
-    document.querySelector('footer').style.display = "none";
-    document.querySelector('.nav-header').style.display = "none";
-    // document.getElementById('progressBar').style.display = "initial";//shows the progress bar needs to be reset somewhere
+    document.getElementById('footer').style.display = "none";
+    document.getElementById('nav-header').style.display = "none";
 }
 
 function hover(element) {
     document.querySelector('.focus-img img').setAttribute('src', element.getAttribute('src'));
 }
+
+function resetForm(tag) {
+    document.querySelector(tag).reset();
+}
+
+
 
 const regularExpressionsProfile = {
     username: /^[a-zA-Z0-9\_\-]{5,20}$/,
