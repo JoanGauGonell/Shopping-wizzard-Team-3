@@ -1,6 +1,6 @@
 
-document.querySelector('#resetProfile').addEventListener.onclick(resetForm('#profile'));
-document.querySelector('#resetAddress').addEventListener.onclick(resetForm('#address'));
+// document.getElementById('resetProfile').addEventListener("click", resetForm('#profile'));
+// document.getElementById('resetAddress').addEventListener("click", resetForm('#address'));
 
 function show(shown, hidden) {
     document.getElementById(shown).style.display = "grid";
