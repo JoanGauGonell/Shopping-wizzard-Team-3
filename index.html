@@ -14,29 +14,28 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#">Logo<a></a>
-            </div>
-            <div class="perfil" id="perfil"></div>
-        </nav>
-    </header>
-    <section>
-        <div class="shopping-store">
-            <div class="container-img">
-                <aside>
-                    <a href="" id="img1"><img src="assets/cami-negra1.jpg" alt=""></a>
-                    <a href="" id="img2"><img src="assets/cami-negra2.jpg" alt=""></a>
-                    <a href="" id="img3"><img src="assets/cami-negra3.jpg" alt=""></a>
-                    <a href="" id="img4"><img src="assets/cami-negra4.jpg" alt=""></a>
-                    <a href="" id="img5"><img src="assets/cami-negra5.jpg" alt=""></a>
-                </aside>
-            </div>
-            <div class="actual-img">
-                <img src="assets/cami-negra1.jpg" alt="">
-            </div>
-            <div class="container-details">
+    <nav class="nav-header">
+        <div class="logo">
+            <a href="#">Logo<a></a>
+        </div>
+    </nav>
+
+    <div class="shopping-store" id="shopping-store">
+
+        <div class="small-img">
+            <img src="assets/cami-negra2.jpg" alt="" onmouseover="hover(this)">
+            <img src="assets/cami-negra3.jpg" alt="" onmouseover="hover(this)">
+            <img src="assets/cami-negra4.jpg" alt="" onmouseover="hover(this)">
+            <img src="assets/cami-negra5.jpg" alt="" onmouseover="hover(this)">
+            <img src="assets/cami-negra1.jpg" alt="" onmouseover="hover(this)">
+        </div>
+
+        <div class="focus-img">
+            <img src="assets/cami-negra1.jpg" alt="">
+        </div>
+
+        <div class="product-details">
+            <div class="product-specifications">
                 <h2><span id="colorString">Brown</span> t-shirt</h2>
                 <p><b>Price</b></p>
                 <h2>14,55€</h2>
@@ -74,7 +73,11 @@
             <button class="button-buy" id="button-buy" onclick="show('form-profile', 'shopping-store')">Buy</button>
 
         </div>
-    </section>
+    </div>
+
+    <footer>
+        <h4>Shop 2022</h4>
+    </footer>
 
     <div class="form-profile">
 
@@ -317,9 +320,6 @@
         </section>
     </div>
 
-    <footer hidden>
-        <h4>Shop 2022</h4>
-    </footer>
 </body>
 
 </html>
