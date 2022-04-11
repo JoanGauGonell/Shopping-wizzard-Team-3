@@ -7,12 +7,14 @@
     display: none;
     border: 1px solid black;
 }
+
 .form {
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem;
     margin-top: 3rem;
 }
+
 .title {
     margin-left: 11px;
 }
@@ -24,27 +26,33 @@
     background-color: rgb(220, 219, 219);
     align-items: flex-end;
 }
+
 /* text style */
-.form__label{
+.form__label {
     font-size: 11px;
 }
+
 .form__input-error {
     font-size: 11px;
 }
-.form__mesage p{
+
+.form__mesage p {
     font-size: 13px;
     text-align: center;
     margin-top: 1rem;
 }
+
 /* form inputs style */
 .form__user-input input {
     border: 1.3px solid black;
     border-radius: 3px;
 }
- .form__user-input input::-webkit-input-placeholder{
+
+.form__user-input input::-webkit-input-placeholder {
     font-size: 10px;
     padding-left: 3px;
 }
+
 /* form groups */
 .form__group {
     margin: 12px;
