@@ -7,7 +7,6 @@
     display: none;
 }
 
-<<<<<<< HEAD
 /* general style for the address form */
 .form-address {
     padding: 0 0;
@@ -27,9 +26,7 @@
     display: none;
     border: 1px solid black;
 }
-=======
 
->>>>>>> master
 
 .form {
     display: flex;
@@ -67,13 +64,8 @@
 .form__input-error-activo {
     display: block;
 }
-<<<<<<< HEAD
-.form__message p {
-    font-size: 13px;
-=======
 .form__mesage  {
     font-size: 18px;
->>>>>>> master
     text-align: center;
     margin-top: 1rem;
     width: 100%;
