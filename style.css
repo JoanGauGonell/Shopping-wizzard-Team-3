@@ -3,26 +3,26 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 0;
     padding: 0 0;
-}
-/* container style of the main  */
-.shopping-store {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-gap: 10px 5px;
+    color: black;
+    text-decoration: none;
 }
 
-/* image style of focus img and small img */
-.focus-img {
-    
+/* container style of the main  */
+.shopping-store {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 2.1fr;
+    gap: 10px;
+    margin: 70px;
 }
+
 /* HEADER */
 .nav-header {
     background-color: rgb(219, 219, 219);
     padding: 40px 0;
     font-size: 30px;
     font-weight: 600;
-    text-align: center;
-    color: black;
+    text-align: start;
+    padding-left: 20px;
 }
 
 /* FOOTER */
@@ -32,30 +32,67 @@ footer {
     text-align: center;
 }
 
+/* PRODUCT IMAGES */
+/* image style of focus img and small img */
+.small-img img {
+    display: flex;
+    width: 70px;
+    height: 90px;
+    border: 1.5px solid black;
+    cursor: pointer;
+}
 
+.small-img img {
+    /* transition: 0.5s; */
+    border: 1.5px solid orange;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 80px;
+}
 
-
+.focus-img img {
+    height: 620px;
+    width: 420px;
+    margin-left: 20%;
+}
 
 /* PRODUCT DETAILS */
 .product-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 10px;
+    margin: 175px;
+    margin-top: 30px;
+}
 
+.product-specifications h2 {
+    margin-bottom: 30px;
+}
+
+.button-buy {
+    margin-top: 50px;
+}
+
+.shirt-color p {
+    margin-bottom: 15px;
+}
+
+.shirt-size {
+    margin-bottom: 50px;
 }
 
 .product-details select {
     border: 2px solid black;
     border-radius: 4px;
     padding: 10px 5px;
-    width: 30%;
+    width: 100%;
 }
 
-.shirt-color a img{
-    width:30px;
+
+
+.shirt-color img {
+    width: 40px;
+    margin: 7px;
 }
 
-#button-buy {
+.button-buy {
     width: 100px;
     border-radius: 5px;
     color: aliceblue;
@@ -68,17 +105,66 @@ footer {
     font-size: 15px;
 }
 
-/* CONTAINER IMAGE */
-.product-imgs {
-    width: 15%;
-    margin-left: 100px;
+/* FORMS */
+
+/* PROGRESS BAR */
+#progressbar {
+    /* margin-top: 30px; */
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    background-color: rgb(240, 240, 240);
+    padding: 40px 0;
 }
 
-.main-img img {
-    /* display: none; */
-    width: 500px;
+#progressbar li {
+    list-style-type: none;
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    width: 23.33%;
+    float: left;
+    position: relative;
+    text-align: center;
 }
 
+#progressbar li:before {
+    position: relative;
+    content: counter(step);
+    counter-increment: step;
+    width: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: rgb(240, 231, 231);
+    border-radius: 50%;
+    margin: 0 auto 5px auto;
+    z-index: 1;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 20px;
+    background: rgb(90, 90, 90);
+    left: -50%;
+    top: 9px;
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #000;
+    color: rgb(3, 3, 3);
+}
 
 /* SHIPPING FORM */
 .content {
@@ -112,7 +198,14 @@ footer {
     resize: none;
     border-radius: 5px;
 }
-
+.gift{
+    display: flex;
+    flex-direction: column;
+}
+.footer_shipping{
+    display: flex;
+    justify-content: right;
+}
 /* 
 .sh {
     margin: 20px 0;

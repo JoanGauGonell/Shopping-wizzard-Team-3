@@ -1,8 +1,13 @@
 function show(shown, hidden) {
-    document.getElementById(shown).style.display = "flex";
+    document.getElementById(shown).style.display = "grid"; //flex or grid, that is the question
     document.getElementById(hidden).style.display = "none";
     document.querySelector('footer').style.display = "none";
+    document.querySelector('.nav-header').style.display = "none";
     // document.getElementById('progressBar').style.display = "initial";//shows the progress bar needs to be reset somewhere
+}
+
+function hover(element) {
+    document.querySelector('.focus-img img').setAttribute('src', element.getAttribute('src'));
 }
 
 const regularExpressionsProfile = {

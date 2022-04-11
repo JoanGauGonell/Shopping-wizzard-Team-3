@@ -1,7 +1,7 @@
 /* general style for the form */
 .form-profile {
     padding: 0 0;
-    margin: 0 0;
+    margin: auto;
     text-decoration: none;
     max-height: 10rem;
     display: none;
@@ -30,20 +30,44 @@
 /* text style */
 .form__label {
     display: block;
+    font-weight: 700;
+    padding: 10px;
     font-size: 11px;
+    cursor: pointer;
 }
 
 .form__input-error {
     font-size: 11px;
+    margin-bottom: 0;
+    display: none; 
 }
-
+.form__input-error-activo {
+    display: block;
+}
 .form__mesage p {
     font-size: 13px;
     text-align: center;
     margin-top: 1rem;
 }
 
+/* icons inputs "X" */
+.form__validation-state {
+    position: absolute;
+    left: 140px;
+}
 /* form inputs style */
+.form__user-input input {
+    background: #fff;
+    border: 3px solid transparent;
+    height: 25px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+}
+.form__input:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
 .form__user-input input {
     border: 1.3px solid black;
     border-radius: 3px;
