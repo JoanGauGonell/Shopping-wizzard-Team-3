@@ -14,10 +14,8 @@ function hover(element) {
 }
 
 function resetForm(tag) {
-    document.querySelector(tag).reset();
+    document.getElementById(tag).reset();
 }
-
-
 
 const regularExpressionsProfile = {
     username: /^[a-zA-Z0-9\_\-]{5,20}$/,

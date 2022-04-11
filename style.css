@@ -42,12 +42,12 @@ footer {
     cursor: pointer;
 }
 
-/* .small-img img {
+.small-img img {
     margin: 3px;
     border: 1px solid #17202A;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 80px;
-} */
+}
 
 .focus-img img {
     height: 620px;
@@ -96,6 +96,11 @@ footer {
     color: aliceblue;
     background-color: black;
     padding: 15px 15px;
+}
+
+.button-buy {
+    font-weight: 600;
+    font-size: 15px;
 }
 
 /* FORMS */
@@ -199,8 +204,7 @@ footer {
     display: flex;
     justify-content: right;
 }
-
-/* 
+/*
 .sh {
     margin: 20px 0;
 } */

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="nav-header">
+    <nav class="nav-header" id="nav-header">
         <div class="logo">
             <a href="#">Logo<a></a>
         </div>
@@ -35,6 +35,7 @@
         </div>
 
         <div class="product-details">
+
             <div class="product-specifications">
                 <h2><span id="colorString">Brown</span> t-shirt</h2>
                 <p><b>Price</b></p>
@@ -75,13 +76,22 @@
         </div>
     </div>
 
-    <footer>
+    <footer id = 'footer'>
         <h4>Shop 2022</h4>
     </footer>
 
-    <div class="form-profile">
+    <div class="form-profile" id='form-profile'>
 
-        <form action="" class="form" id="form">
+        <nav class="form-header">
+            <ul id="progressbar">
+                <li class="active">Profile</li>
+                <li>Address</li>
+                <li>Shipping</li>
+                <li>Finish</li>
+            </ul>
+        </nav>
+
+        <form action="" class="profile" id="profile">
             <h2 class="title">Profile</h2>
             <!-- group: username -->
             <div class="form__group" id="group__user">
@@ -134,7 +144,7 @@
         <div class="form__button-baseline">
             <!-- button clear form delete value -->
             <div class="form__group form__group-btn-clear">
-                <button id="resetProfile" class="form__btn-clear" onclick="resetForm('#profile')">Clear form</button>
+                <button id="resetProfile" class="form__btn-clear" onclick="resetForm('profile')">Clear form</button>
             </div>
             <!-- button next -->
             <div class="form__group form__group-btn-next">
@@ -146,6 +156,7 @@
     </div>
 
     <div class="form-address" id='form-address'>
+
         <nav class="form-header">
             <ul id="progressbar">
                 <li class="active">Profile</li>
@@ -260,7 +271,7 @@
         <div class="form__button-baseline">
             <!-- button clear form delete value -->
             <div class="form__group form__group-btn-clear">
-                <button id="resetAddress" class="form__btn-clear" onclick="resetForm('#address')">Clear form</button>
+                <button id="resetAddress" class="form__btn-clear" onclick="resetForm('address')">Clear form</button>
             </div>
             <!-- button next -->
             <div class="form__group form__group-btn-next">
