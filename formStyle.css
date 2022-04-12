@@ -16,6 +16,9 @@
     display: none;
 }
 
+
+/* SHIPPING FORM */
+
 /* general style for the shipping form */
 .form-shipping {
     padding: 0 0;
@@ -24,7 +27,6 @@
     max-height: 10rem;
     display: none;
 }
-
 
 .form {
     display: flex;

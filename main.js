@@ -42,3 +42,9 @@ const regularExpressionsAddress = {
     Country: /^.{4,12}$/,
     Phone: /^.{4,12}$/
 }
+
+
+// TIMER
+const time = document.getElementById("time")
+let countdown = setTimeout
+// TIMER
