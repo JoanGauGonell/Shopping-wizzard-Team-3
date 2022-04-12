@@ -142,6 +142,20 @@
     height: 25px;
     width: 60px;
 }
+.form__btn-checkout {
+    background-color: black;
+    color: white;
+    border: 1.3px solid black;
+    border-radius: 4px;
+    height: 25px;
+    width: 60px;
+}
+
+.form__btn-checkout:disabled{
+    background: #999;
+    color: #555;
+    cursor: not-allowed;
+}
 
 /* form validations */
 .form__group-correct .form__validation-state {

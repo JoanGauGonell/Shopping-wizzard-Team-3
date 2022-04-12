@@ -340,15 +340,16 @@
             </div>
         </div>
     </div>
+
     <!-- LAST STEP (FINISH) -->
     <div class="form-finish" id="form-finish">
-        <nav class="form-header"></nav>
-        <ul id="progressbar">
-            <li class="active">Profile</li>
-            <li class="active">Address</li>
-            <li class="active">Shipping</li>
-            <li class="active">Finish</li>
-        </ul>
+        <nav class="form-header">
+            <ul id="progressbar">
+                <li class="active">Profile</li>
+                <li class="active">Address</li>
+                <li class="active">Shipping</li>
+                <li class="active">Finish</li>
+            </ul>
         </nav>
         <div class="completed-order" id="completed-order" hidden>
             <h2>Your order is complete!</h2>
@@ -373,8 +374,20 @@
                         <p>and <b>31 de julio de 2020</b></p>
                     </div>
                 </div>
+                <input type="checkbox" name="finish-conditions" id="finishConditions" onchange="enableBuy()">
+                <label for="finsih-conditions">I have read and I accept the terms and conditions.</label>
+                <p class="warning-conditions">Please accept the terms and conditions</p>
+                <button class="form__btn-checkout" type="submit" onclick="show('shopping-store', 'form-finish')"> Buy
+                    now</button>
+            </div>
+            <div class="order-prices">
+                <h4>Your order</h4>
+                <p>T-shirt: <b>14.55€</b> </p>
+                <p>Premium Shipping: <b>9.99€</b></p>
+                <p>Total: <b>24.54€</b> </p>
             </div>
         </div>
+    </div>
 </body>
 
 </html>
