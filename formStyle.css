@@ -21,10 +21,10 @@
 
 /* general style for the shipping form */
 .form-shipping {
-    padding: 0 0;
+    /* padding: 0 0;
     margin: auto;
     text-decoration: none;
-    max-height: 10rem;
+    max-height: 10rem; */
     display: none;
 }
 
