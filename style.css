@@ -223,6 +223,7 @@ footer {
 
 /* FINISH CARD */
 .form-finish{
+    display: none;
     background-color: rgb(235, 235, 235);
 }
 .purchase_order{
