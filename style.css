@@ -91,16 +91,19 @@ footer {
 }
 
 .button-buy {
-    width: 100px;
+    width: 200px;
     border-radius: 5px;
     color: aliceblue;
     background-color: black;
     padding: 15px 15px;
-}
-
-.button-buy {
     font-weight: 600;
     font-size: 15px;
+}
+
+.button-buy:disabled {
+    background: #999;
+    color: #555;
+    cursor: not-allowed;
 }
 
 /* FORMS */
@@ -216,6 +219,71 @@ footer {
 .formshipping textarea {
     margin: 20px 0;
 }
+
+/* FINISH CARD */
+.form-finish{
+    background-color: rgb(235, 235, 235);
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.purchase{
+    margin: 40px 30px 0 80px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 50px;
+}
+.purchase p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.finish-order{
+    margin: 40px 30px 0 80px;
+    width: 20%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 50px;
+    height: 200px;
+}
+.finish-order p{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.finish-order h4{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.purchase img{
+    margin-right: 60px;
+}
+
+.shirt-card{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+.purchase-color{
+    display: flex;
+    align-items: baseline;
+}
+#color-square{
+    background-color: rgb(0, 0, 0);
+    width: 40px;
+    height: 30px;
+    margin-left: 30px;
+}
+.warning-conditions{
+    background-color: rgb(248, 193, 193);
+    color: red;
+    margin: 20px 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+/* END */
+
 
 .selectimg {
     margin-top: 20px;

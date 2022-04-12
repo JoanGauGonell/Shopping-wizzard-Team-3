@@ -1,4 +1,3 @@
-
 // document.getElementById('resetProfile').addEventListener("click", resetForm('#profile'));
 // document.getElementById('resetAddress').addEventListener("click", resetForm('#address'));
 
@@ -15,6 +14,15 @@ function hover(element) {
 
 function resetForm(tag) {
     document.getElementById(tag).reset();
+}
+
+function enableBuy() {
+    if (document.querySelector('#finishConditions').checked) {
+        console.log("CHECKED: ", document.querySelector('#finishConditions').checked);
+        console.log("Disabled: ", document.getElementById('button-buy').getAttribute('disabled'));
+
+        document.getElementById('button-buy').setAttribute("disabled", "enabled");
+    }
 }
 
 const regularExpressionsProfile = {
