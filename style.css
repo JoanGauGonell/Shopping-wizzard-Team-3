@@ -10,7 +10,7 @@
 /* container style of the main  */
 .shopping-store {
     display: grid;
-    grid-template-columns: 0.1fr 0.8fr 3fr;
+    grid-template-columns: 0.1fr 1fr 2.1fr;
     gap: 10px;
     margin: 70px;
 }
@@ -43,8 +43,8 @@ footer {
 }
 
 .small-img img {
-    margin: 3px;
-    border: 1px solid #17202A;
+    /* transition: 0.5s; */
+    border: 1.5px solid orange;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 80px;
 }
@@ -85,6 +85,8 @@ footer {
     width: 100%;
 }
 
+
+
 .shirt-color img {
     width: 40px;
     margin: 7px;
@@ -96,14 +98,11 @@ footer {
     color: aliceblue;
     background-color: black;
     padding: 15px 15px;
-    font-weight: 600;
-    font-size: 15px;
 }
 
-.button-buy:disabled {
-    background: #999;
-    color: #555;
-    cursor: not-allowed;
+.button-buy {
+    font-weight: 600;
+    font-size: 15px;
 }
 
 /* FORMS */
@@ -195,9 +194,103 @@ footer {
     z-index: -1;
 }
 
-/* END SHIPPING */
+#giftmsg {
+    width: 400px;
+    border: 2px black solid;
+    resize: none;
+    border-radius: 5px;
+}
+.gift{
+    display: flex;
+    flex-direction: column;
+}
+.footer_shipping{
+    display: flex;
+    justify-content: right;
+}
+/* 
+.sh {
+    margin: 20px 0;
+} */
 
+.formshipping input {
+    margin-bottom: 30px;
+}
 
+.formshipping textarea {
+    margin: 20px 0;
+}
+
+/* FINISH CARD */
+.form-finish{
+    display: none;
+    background-color: rgb(235, 235, 235);
+}
+.purchase_order{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 10%; */
+}
+.completed-order{
+    margin: 40px 30px 0 160px;
+}
+.purchase{
+    margin: 40px 30px 0 160px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 50px;
+}
+.purchase p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.order-prices{
+    margin: 40px 30px 0 20%;
+    width: 20%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 50px;
+    height: 30%;
+}
+.order-prices p{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.order-prices h4{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.purchase img{
+    margin-right: 60px;
+}
+
+.shirt-card{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+.purchase-color{
+    display: flex;
+    align-items: baseline;
+}
+#color-square{
+    background-color: rgb(0, 0, 0);
+    width: 40px;
+    height: 30px;
+    margin-left: 30px;
+}
+.warning-conditions{
+    background-color: rgb(248, 211, 211);
+    color: rgb(184, 3, 3);
+    margin: 20px 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+/* END */
 
 
 .selectimg {
