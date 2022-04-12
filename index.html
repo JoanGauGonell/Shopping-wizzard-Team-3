@@ -282,7 +282,7 @@
         </div>
     </div>
 
-    <div class="form-shipping" id='form-shipping' >
+    <div class="form-shipping" id='form-shipping' hidden>
 
         <nav class="form-header">
         <ul id="progressbar">
@@ -349,9 +349,9 @@
             <li class="active">Finish</li>
         </ul>
         </nav>
-        <div class="completed-order" hidden>
+        <div class="completed-order" id="completed-order" hidden>
             <h2>Your order is complete!</h2>
-            <p>Thank you for your order!</p>
+            <p>Thank you for your order! <i class="fa-regular fa-party-horn"></i></p>
         </div>
         <div class="purchase_order">
         <div class="purchase">
@@ -372,7 +372,7 @@
             <input type="checkbox" name="finish-conditions" id="finishConditions">
             <label for="finsih-conditions">I have read and I accept the terms and conditions.</label>
             <p class="warning-conditions" >Please accept the terms and conditions</p>
-            <button class="button-buy"> Buy now</button>
+            <button class="form__btn-next" type="submit"  onclick="show('completed-order', '')"> Buy now</button>
         </div>
         <div class="order-prices">
             <h4>Your order</h4>
