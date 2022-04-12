@@ -28,6 +28,11 @@
     display: none;
 }
 
+.form-finish{
+    display: none;
+    background-color: rgb(235, 235, 235);
+}
+
 .form {
     display: flex;
     flex-direction: column;
