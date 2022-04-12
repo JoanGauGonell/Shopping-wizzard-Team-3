@@ -29,7 +29,25 @@ const regularExpressionsAddress = {
 }
 
 
+
+
 // TIMER
-const time = document.getElementById("time")
-let countdown = setTimeout
+const intervalTimer = document.querySelector(".sideright");
+const minutesTime= document.querySelector(".time");
+let timeMinutes = 0;
+
+let showEveryMinute = setInterval (function () {
+    intervalTimer.style.display="block";
+    show5Seconds();
+    timeMinutes++;
+    minutesTime.textContent = timeMinutes+" ";
+    if (timeMinutes===5){
+        clearInterval(showEveryMinute);
+    }
+},60000);
+function show5Seconds(){
+    setTimeout(function(){
+        intervalTimer.style.display="none";
+    },5000)
+}
 // TIMER
