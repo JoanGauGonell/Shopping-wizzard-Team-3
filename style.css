@@ -223,7 +223,7 @@ footer {
 .form-finish{
     background-color: rgb(235, 235, 235);
 }
-.content{
+.purchase_order{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -239,7 +239,7 @@ footer {
     margin-top: 20px;
     font-size: 20px;
 }
-.finish-order{
+.order-prices{
     margin: 40px 30px 0 80px;
     width: 20%;
     background-color: white;
@@ -247,11 +247,11 @@ footer {
     padding: 50px;
     height: 200px;
 }
-.finish-order p{
+.order-prices p{
     margin-bottom: 20px;
     font-size: 20px;
 }
-.finish-order h4{
+.order-prices h4{
     font-size: 30px;
     margin-bottom: 20px;
 }
@@ -275,8 +275,8 @@ footer {
     margin-left: 30px;
 }
 .warning-conditions{
-    background-color: rgb(248, 193, 193);
-    color: red;
+    background-color: rgb(248, 211, 211);
+    color: rgb(184, 3, 3);
     margin: 20px 0;
     padding: 15px 10px;
     border-radius: 10px;
