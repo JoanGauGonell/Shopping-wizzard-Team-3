@@ -1,6 +1,9 @@
 const profileInputs = document.querySelectorAll('#profile input');
 const formProfile = document.getElementById('profile');
 
+const addressInputs = document.querySelectorAll('#address input');
+const formAddress = document.getElementById('address');
+
 // document.getElementById('resetProfile').addEventListener("click", resetForm('#profile'));
 // document.getElementById('resetAddress').addEventListener("click", resetForm('#address'));
 
@@ -58,7 +61,16 @@ formProfile.addEventListener('submit', function (event) {
     e.preventDefault();
 });
 
+formAddress.addEventListener('submit', function (event) {
+    e.preventDefault();
+});
+
 profileInputs.forEach(function formInputs(input) {
+    input.addEventListener('keyup', validateForms);
+    input.addEventListener('blur', validateForms);
+});
+
+addressInputs.forEach(function formInputs(input) {
     input.addEventListener('keyup', validateForms);
     input.addEventListener('blur', validateForms);
 });
@@ -82,28 +94,29 @@ function validateForms(event) {
                 break;
                 // ADDRESS PAGE
             case "firstName":
-                validateFields(expressionsProfile.firstName, event.target, 'firstName');
+                console.log("The address page firstName is:");
+                validateFields(expressionsAddress.firstName, event.target, 'firstName');
                 break;
             case "lastName":
-                validateFields(expressionsProfile.lastName, event.target, 'lastName');
+                validateFields(expressionsAddress.lastName, event.target, 'lastName');
                 break;
             case "birthday":
-                validateFields(expressionsProfile.birthday, event.target, 'birthday');
+                validateFields(expressionsAddress.birthday, event.target, 'birthday');
                 break;
             case "address1":
-                validateFields(expressionsProfile.address1, event.target, 'address1');
+                validateFields(expressionsAddress.address1, event.target, 'address1');
                 break;
             case "address2":
-                validateFields(expressionsProfile.address2, event.target, 'address2');
+                validateFields(expressionsAddress.address2, event.target, 'address2');
                 break;
             case "postalCode":
-                validateFields(expressionsProfile.postalCode, event.target, 'postalCode');
+                validateFields(expressionsAddress.postalCode, event.target, 'postalCode');
                 break;
             case "country":
-                validateFields(expressionsProfile.country, event.target, 'country');
+                validateFields(expressionsAddress.country, event.target, 'country');
                 break;
             case "phone":
-                validateFields(expressionsProfile.phone, event.target, 'phone');
+                validateFields(expressionsAddress.phone, event.target, 'phone');
                 break;
             // SHIPPING PAGE ?
         case "default":
