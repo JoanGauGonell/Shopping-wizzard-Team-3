@@ -377,7 +377,8 @@
                 <input type="checkbox" name="finish-conditions" id="finishConditions" onchange="enableBuy()">
                 <label for="finsih-conditions">I have read and I accept the terms and conditions.</label>
                 <p class="warning-conditions">Please accept the terms and conditions</p>
-                <button class="form__btn-checkout" type="submit" onclick="show('shopping-store', 'form-finish')"> Buy
+                <button class="form__btn-checkout" id="form__btn-checkout" type="submit"
+                    onclick="show('shopping-store', 'form-finish')" disabled> Buy
                     now</button>
             </div>
             <div class="order-prices">

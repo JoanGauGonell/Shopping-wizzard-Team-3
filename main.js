@@ -21,10 +21,13 @@ function resetForm(tag) {
 
 function enableBuy() {
     if (document.querySelector('#finishConditions').checked) {
-        console.log("CHECKED: ", document.querySelector('#finishConditions').checked);
-        console.log("Disabled: ", document.getElementById('button-buy').getAttribute('disabled'));
 
-        document.getElementById('button-buy').setAttribute("disabled", "enabled");
+        document.querySelector('#form__btn-checkout').disabled = false;
+
+    } else if (!document.querySelector('#finishConditions').checked) {
+
+        document.querySelector('#form__btn-checkout').disabled = true;
+
     }
 }
 
@@ -32,20 +35,19 @@ const expressionsProfile = {
     username: /^[a-zA-Z0-9\_\-]{5,20}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-.]+$/, // number, characters + @ + numbers, character + . + numbers,characters
     password: /^.{4,12}$/,
-    confirmPassword: /^.{4,12}$/
+    password2: /^.{4,12}$/
 }
 
 const expressionsAddress = {
     firstName: /^[a-zA-Z]{4,16}$/,
     lastName: /^[a-zA-Z]{4,16}$/,
     birthday: /^[]{1,2}$/,
-    Address_1: /^[a-zA-Z0-9]$/,
-    Address_2: /^.{4,12}$/,
-    Postal_code: /^.{4,12}$/,
-    Country: /^.{4,12}$/,
-    Phone: /^.{4,12}$/
+    address1: /^[a-zA-Z0-9]$/,
+    address2: /^.{4,12}$/,
+    postalCode: /^.{4,12}$/,
+    country: /^.{4,12}$/,
+    phone: /^.{4,12}$/
 }
-
 
 // TIMER
 const time = document.getElementById('time');
@@ -64,56 +66,63 @@ profileInputs.forEach(function formInputs(input) {
 function validateForms(event) {
     console.log(event.target.name);
     switch (event.target.name) {
+        // PROFILE PAGE
         case "user":
             console.log("The username is:");
-            if(expressionsProfile.username.test(event.target.value)){
-                document.getElementById('group__user').classList.remove('form__group-incorrect');
-                document.getElementById('group__user').classList.add('form__group-correct');
-                document.querySelector('#group__user i').classList.remove('fa-circle-xmark');
-                document.querySelector('#group__user i').classList.add('fa-check-circle');
-                console.log("correct");
-            }else{
-                document.getElementById('group__user').classList.add('form__group-incorrect');
-                console.log("incorrect");
-            }
+            validateFields(expressionsProfile.username, event.target, 'user');
             break;
-        case "email":
-            if(expressionsProfile.email.test(event.target.value)){
-                document.getElementById('group__email').classList.remove('form__group-incorrect');
-                document.getElementById('group__email').classList.add('form__group-correct');
-                document.querySelector('#group__email i').classList.remove('fa-circle-xmark');
-                document.querySelector('#group__email i').classList.add('fa-check-circle');
-                console.log("correct");
-            }else{
-                document.getElementById('group__email').classList.add('form__group-incorrect');
-                console.log("incorrect");
-            }
-            break;
-        case "password":
-            if(expressionsProfile.password.test(event.target.value)){
-                document.getElementById('group__password').classList.remove('form__group-incorrect');
-                document.getElementById('group__password').classList.add('form__group-correct');
-                document.querySelector('#group__password i').classList.remove('fa-circle-xmark');
-                document.querySelector('#group__password i').classList.add('fa-check-circle');
-                console.log("correct");
-            }else{
-                document.getElementById('group__email').classList.add('form__group-incorrect');
-                console.log("incorrect");
-            }
-            break;
-        case "password2":
-            if(expressionsProfile.password.test(event.target.value)){
-                document.getElementById('group__password2').classList.remove('form__group-incorrect');
-                document.getElementById('group__password2').classList.add('form__group-correct');
-                document.querySelector('#group__password2 i').classList.remove('fa-circle-xmark');
-                document.querySelector('#group__password2 i').classList.add('fa-check-circle');
-                console.log("correct");
-            }else{
-                document.getElementById('group__password2').classList.add('form__group-incorrect');
-                console.log("incorrect");
-            }
-            break;
+            case "email":
+                validateFields(expressionsProfile.email, event.target, 'email');
+                break;
+            case "password":
+                validateFields(expressionsProfile.password, event.target, 'password');
+                break;
+            case "password2":
+                validateFields(expressionsProfile.password2, event.target, 'password2');
+                break;
+                // ADDRESS PAGE
+            case "firstName":
+                validateFields(expressionsProfile.firstName, event.target, 'firstName');
+                break;
+            case "lastName":
+                validateFields(expressionsProfile.lastName, event.target, 'lastName');
+                break;
+            case "birthday":
+                validateFields(expressionsProfile.birthday, event.target, 'birthday');
+                break;
+            case "address1":
+                validateFields(expressionsProfile.address1, event.target, 'address1');
+                break;
+            case "address2":
+                validateFields(expressionsProfile.address2, event.target, 'address2');
+                break;
+            case "postalCode":
+                validateFields(expressionsProfile.postalCode, event.target, 'postalCode');
+                break;
+            case "country":
+                validateFields(expressionsProfile.country, event.target, 'country');
+                break;
+            case "phone":
+                validateFields(expressionsProfile.phone, event.target, 'phone');
+                break;
+            // SHIPPING PAGE ?
         case "default":
             break;
+    }
+}
+
+function validateFields(expression, input, field) {
+    if (expression.test(input.value)) {
+        document.getElementById(`group__${field}`).classList.remove('form__group-incorrect');
+        document.getElementById(`group__${field}`).classList.add('form__group-correct');
+        document.querySelector(`#group__${field} i`).classList.remove('fa-circle-xmark');
+        document.querySelector(`#group__${field} i`).classList.add('fa-check-circle');
+        document.querySelector(`#group__${field} .form__input-error`).classList.remove('form__input-error-active');
+    } else {
+        document.getElementById(`group__${field}`).classList.remove('form__group-correct');
+        document.getElementById(`group__${field}`).classList.add('form__group-incorrect');
+        document.querySelector(`#group__${field} i`).classList.add('fa-circle-xmark');
+        document.querySelector(`#group__${field} i`).classList.remove('fa-check-circle');
+        document.querySelector(`#group__${field} .form__input-error`).classList.add('form__input-error-active');
     }
 }
