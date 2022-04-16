@@ -56,7 +56,8 @@ footer {
 }
 
 .focus-img img {
-  height: 620px;
+  margin-top: 45px;
+  height: 420px;
   width: 420px;
   margin-left: 20%;
 }
