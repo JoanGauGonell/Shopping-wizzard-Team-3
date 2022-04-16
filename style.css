@@ -210,10 +210,10 @@ footer {
   display: flex;
   justify-content: right;
 }
-/* 
+
 .sh {
     margin: 20px 0;
-} */
+}
 
 .formshipping input {
   margin-bottom: 30px;
@@ -255,7 +255,7 @@ label[for="selecting"] {
 }
 
 .sideleft {
-  margin-left: 300px;
+  margin-left: 50px;
 }
 
 #clearform {
