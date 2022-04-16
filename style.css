@@ -1,210 +1,214 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Pacifico&family=Work+Sans:wght@200&display=swap");
+
 /* General style */
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0 0;
-    padding: 0 0;
-    color: black;
-    text-decoration: none;
+  font-family: "Chakra Petch", sans-serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Work Sans", sans-serif;
+  margin: 0 0;
+  padding: 0 0;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* container style of the main  */
 .shopping-store {
-    display: grid;
-    grid-template-columns: 0.1fr 0.8fr 3fr;
-    gap: 10px;
-    margin: 70px;
+  display: grid;
+  grid-template-columns: 0.1fr 0.8fr 3fr;
+  gap: 10px;
+  margin: 70px;
 }
 
 /* HEADER */
 .nav-header {
-    background-color: rgb(219, 219, 219);
-    padding: 40px 0;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: start;
-    padding-left: 20px;
+  background-color: rgb(219, 219, 219);
+  padding: 40px 0;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: start;
+  padding-left: 20px;
 }
 
 /* FOOTER */
 footer {
-    background-color: rgb(219, 219, 219);
-    padding: 40px 0;
-    text-align: center;
+  background-color: rgb(219, 219, 219);
+  padding: 40px 0;
+  text-align: center;
 }
 
 /* PRODUCT IMAGES */
 /* image style of focus img and small img */
 .small-img img {
-    display: flex;
-    width: 70px;
-    height: 90px;
-    border: 1.5px solid black;
-    cursor: pointer;
+  display: flex;
+  width: 70px;
+  height: 90px;
+  border: 1.5px solid black;
+  cursor: pointer;
 }
 
 .small-img img {
-    margin: 3px;
-    border: 1px solid #17202A;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 80px;
+  margin: 3px;
+  border: 1px solid #17202a;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 80px;
 }
 
 .focus-img img {
-    height: 620px;
-    width: 420px;
-    margin-left: 20%;
+  height: 620px;
+  width: 420px;
+  margin-left: 20%;
 }
 
 /* PRODUCT DETAILS */
 .product-details {
-    padding: 10px;
-    margin: 175px;
-    margin-top: 30px;
+  padding: 10px;
+  margin: 175px;
+  margin-top: 30px;
 }
 
 .product-specifications h2 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .button-buy {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .shirt-color p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .shirt-size {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .product-details select {
-    border: 2px solid black;
-    border-radius: 4px;
-    padding: 10px 5px;
-    width: 100%;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 10px 5px;
+  width: 100%;
 }
-
-
 
 .shirt-color img {
-    width: 40px;
-    margin: 7px;
+  width: 40px;
+  margin: 7px;
 }
 
 .button-buy {
-    width: 100px;
-    border-radius: 5px;
-    color: aliceblue;
-    background-color: black;
-    padding: 15px 15px;
+  width: 100px;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: black;
+  padding: 15px 15px;
 }
 
 .button-buy {
-    font-weight: 600;
-    font-size: 15px;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 /* FORMS */
 
 /* PROGRESS BAR */
 #progressbar {
-    /* margin-top: 30px; */
-    overflow: hidden;
-    /*CSS counters to number the steps*/
-    counter-reset: step;
-    background-color: rgb(240, 240, 240);
-    padding: 40px 0;
+  /* margin-top: 30px; */
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+  background-color: rgb(240, 240, 240);
+  padding: 40px 0;
 }
 
 #progressbar li {
-    list-style-type: none;
-    color: rgb(2, 2, 2);
-    font-size: 20px;
-    width: 23.33%;
-    float: left;
-    position: relative;
-    text-align: center;
+  list-style-type: none;
+  color: rgb(2, 2, 2);
+  font-size: 23px;
+  width: 23.33%;
+  float: left;
+  position: relative;
+  text-align: center;
 }
 
 #progressbar li:before {
-    position: relative;
-    content: counter(step);
-    counter-increment: step;
-    width: 40px;
-    line-height: 40px;
-    display: block;
-    font-size: 10px;
-    color: #333;
-    background: rgb(240, 231, 231);
-    border-radius: 50%;
-    margin: 0 auto 5px auto;
-    z-index: 1;
+  position: relative;
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  line-height: 40px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: rgb(240, 231, 231);
+  border-radius: 50%;
+  margin: 0 auto 5px auto;
+  z-index: 1;
 }
 
 /*progressbar connectors*/
 #progressbar li:after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 20px;
-    background: rgb(90, 90, 90);
-    left: -50%;
-    top: 9px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 20px;
+  background: rgb(90, 90, 90);
+  left: -50%;
+  top: 9px;
 }
 
 #progressbar li:first-child:after {
-    /*connector not needed before the first step*/
-    content: none;
+  /*connector not needed before the first step*/
+  content: none;
 }
 
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,
 #progressbar li.active:after {
-    background: #000;
-    color: rgb(3, 3, 3);
+  background: #000;
+  color: rgb(3, 3, 3);
 }
 
 /* SHIPPING FORM */
 .content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .sideright {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .sideright form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #selecting {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 #giftmsg {
-    width: 400px;
-    border: 2px black solid;
-    resize: none;
-    border-radius: 5px;
+  width: 400px;
+  border: 2px black solid;
+  resize: none;
+  border-radius: 5px;
 }
-.gift{
-    display: flex;
-    flex-direction: column;
+.gift {
+  display: flex;
+  flex-direction: column;
 }
-.footer_shipping{
-    display: flex;
-    justify-content: right;
+.footer_shipping {
+  display: flex;
+  justify-content: right;
 }
 /* 
 .sh {
@@ -212,66 +216,66 @@ footer {
 } */
 
 .formshipping input {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .formshipping textarea {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .selectimg {
-    margin-top: 20px;
-    margin-bottom: 80px;
+  margin-top: 20px;
+  margin-bottom: 80px;
 }
 
 .sideright {
-    border: 2px solid rgb(172, 172, 172);
-    margin-top: 50px;
-    margin-right: 20%;
-    padding: 50px;
-    height: fit-content;
-    background-color: rgb(230, 230, 230);
+  border: 2px solid rgb(172, 172, 172);
+  margin-top: 50px;
+  margin-right: 20%;
+  padding: 50px;
+  height: fit-content;
+  background-color: rgb(230, 230, 230);
 }
 
 label[for="selecting"] {
-    font-size: 20px;
-    font-weight: 600;
-    border: 2px black solid;
-    border-radius: 5px;
-    display: inline-block;
-    transition: all .5s;
-    cursor: pointer;
-    padding: 15px 40px !important;
-    width: 300px;
-    text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px black solid;
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 15px 40px !important;
+  width: 300px;
+  text-align: center;
 }
 
 .inputalign label {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .sideleft {
-    margin-left: 300px
+  margin-left: 300px;
 }
 
 #clearform {
-    background-color: white;
-    padding: 10px 30px;
-    border: 2px black solid;
-    border-radius: 5px;
+  background-color: white;
+  padding: 10px 30px;
+  border: 2px black solid;
+  border-radius: 5px;
 }
 
 .footerbuttons {
-    position: absolute;
-    right: 50px;
+  position: absolute;
+  right: 50px;
 }
 
 #next {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 11px 40px;
-    border: 2px black solid;
-    border-radius: 5px;
-    margin-left: 30px;
-    align-items: right;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 11px 40px;
+  border: 2px black solid;
+  border-radius: 5px;
+  margin-left: 30px;
+  align-items: right;
 }
