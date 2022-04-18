@@ -218,6 +218,28 @@ footer {
     border-radius: 5px;
 }
 
+.gift {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_shipping {
+    display: flex;
+    justify-content: right;
+}
+
+.sh {
+    margin: 20px 0;
+}
+
+.formshipping input {
+    margin-bottom: 30px;
+}
+
+.formshipping textarea {
+    margin: 20px 0;
+}
+
 /* END SHIPPING */
 
 
@@ -298,29 +320,7 @@ footer {
     border-radius: 10px;
 }
 
-.gift {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer_shipping {
-    display: flex;
-    justify-content: right;
-}
-
-.sh {
-    margin: 20px 0;
-}
-
-.formshipping input {
-    margin-bottom: 30px;
-}
-
-.formshipping textarea {
-    margin: 20px 0;
-}
-
-/* END */
+/* END FINISH*/
 
 
 .selectimg {

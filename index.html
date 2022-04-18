@@ -82,6 +82,7 @@
         <h4>Shop 2022</h4>
     </footer>
 
+    <!-- the progressbar -->
     <div class="form-profile" id='form-profile'>
 
         <nav class="form-header">
@@ -99,7 +100,8 @@
             <div class="form__group" id="group__user">
                 <label for="user" class="form__label">Username</label>
                 <div class="form__user-input">
-                    <input type="text" class="form-input" name="user" id="user" placeholder="Alejandro Gaerste">
+                    <input type="text" class="form-input" name="user" id="user" placeholder="Alejandro Gaerste" required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The user must have from 5 to 20 digits and no empty spaces</p>
             </div>
@@ -108,7 +110,8 @@
             <div class="form__group" id="group__email">
                 <label for="email" class="form__label">Email</label>
                 <div class="form__user-input">
-                    <input type="text" class="form-input" name="email" id="email" placeholder="example@mail.com">
+                    <input type="text" class="form-input" name="email" id="email" placeholder="example@mail.com" required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">Must contain @ and a max. of 50 characters length</p>
             </div>
@@ -117,7 +120,8 @@
             <div class="form__group" id="group__password">
                 <label for="password" class="form__label">Password</label>
                 <div class="form__user-input">
-                    <input type="password" class="form-input" name="password" id="password" placeholder="Password">
+                    <input type="password" class="form-input" name="password" id="password" placeholder="Password" required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The text must contain at least: one number, one uppercase letter, one
                     lowercase letter and one special character</p>
@@ -128,7 +132,8 @@
                 <label for="password2" class="form__label">Confirm Password</label>
                 <div class="form__user-input">
                     <input type="password" class="form-input" name="password2" id="password2"
-                        placeholder="Confirm Password">
+                        placeholder="Confirm Password" required>
+                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">Must be the same that the previous password</p>
             </div>
@@ -150,6 +155,7 @@
                     onclick="show('form-address', 'form-profile')">Next</button>
             </div>
         </div>
+
     </div>
 
     <div class="form-address" id='form-address'>
