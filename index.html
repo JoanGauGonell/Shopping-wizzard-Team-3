@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="nav-header">
+    <nav class="nav-header" id="nav-header">
         <div class="logo">
             <a href="#">Logo<a></a>
         </div>
@@ -35,6 +35,7 @@
         </div>
 
         <div class="product-details">
+
             <div class="product-specifications">
                 <h2><span id="colorString">Brown</span> t-shirt</h2>
                 <p><b>Price</b></p>
@@ -53,21 +54,23 @@
 
             <div class="shirt-color">
                 <p><b>Color:</b></p>
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
-                <img src="assets/cami-negra1.jpg" alt="">
+                <div class="shirt__color-img">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="">
+                </div>
             </div>
 
             <button class="button-buy" id="button-buy" onclick="show('form-profile', 'shopping-store')">Buy</button>
@@ -75,12 +78,13 @@
         </div>
     </div>
 
-    <footer>
-        <h4>SHOP 2034</h4>
+    <footer id='footer'>
+        <h4>Shop 2022</h4>
     </footer>
 
+    <!-- the progressbar -->
+    <div class="form-profile" id='form-profile'>
 
-    <div class="form-profile" id='form-profile' hidden>
         <nav class="form-header">
             <ul id="progressbar">
                 <li class="active">Profile</li>
@@ -90,13 +94,14 @@
             </ul>
         </nav>
 
-        <form action="" class="form" id="form">
+        <form action="" class="profile" id="profile">
             <h2 class="title">Profile</h2>
             <!-- group: username -->
             <div class="form__group" id="group__user">
                 <label for="user" class="form__label">Username</label>
                 <div class="form__user-input">
-                    <input type="text" class="form-input" name="user" id="user" placeholder="Alejandro Gaerste">
+                    <input type="text" class="form-input" name="user" id="user" placeholder="Alejandro Gaerste"
+                        required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The user must have from 5 to 20 digits and no empty spaces</p>
@@ -106,7 +111,8 @@
             <div class="form__group" id="group__email">
                 <label for="email" class="form__label">Email</label>
                 <div class="form__user-input">
-                    <input type="text" class="form-input" name="email" id="email" placeholder="example@mail.com">
+                    <input type="text" class="form-input" name="email" id="email" placeholder="example@mail.com"
+                        required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">Must contain @ and a max. of 50 characters length</p>
@@ -116,7 +122,8 @@
             <div class="form__group" id="group__password">
                 <label for="password" class="form__label">Password</label>
                 <div class="form__user-input">
-                    <input type="password" class="form-input" name="password" id="password" placeholder="password">
+                    <input type="password" class="form-input" name="password" id="password" placeholder="Password"
+                        required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The text must contain at least: one number, one uppercase letter, one
@@ -128,14 +135,14 @@
                 <label for="password2" class="form__label">Confirm Password</label>
                 <div class="form__user-input">
                     <input type="password" class="form-input" name="password2" id="password2"
-                        placeholder="Confirm Password">
+                        placeholder="Confirm Password" required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">Must be the same that the previous password</p>
             </div>
 
             <!-- button and errors form -->
-            <div class="form__mesage" id="form__mesage">
+            <div class="form__message" id="form__message">
                 <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Please complete the form!!</p>
             </div>
         </form>
@@ -143,7 +150,7 @@
         <div class="form__button-baseline">
             <!-- button clear form delete value -->
             <div class="form__group form__group-btn-clear">
-                <button type="delete" class="form__btn-clear">Clear form</button>
+                <button id="resetProfile" class="form__btn-clear" onclick="resetForm('profile')">Clear form</button>
             </div>
             <!-- button next -->
             <div class="form__group form__group-btn-next">
@@ -151,7 +158,7 @@
                     onclick="show('form-address', 'form-profile')">Next</button>
             </div>
         </div>
-        <div class="sideright" >
+        <div class="sideright">
             <p>You started registering</p>
             <p><b><span class="time"></span></b><b>minutes ago.</b></p>
             <br>
@@ -159,7 +166,7 @@
         </div>
     </div>
 
-    <div class="form-address" id='form-address' hidden>
+    <div class="form-address" id='form-address'>
 
         <nav class="form-header">
             <ul id="progressbar">
@@ -170,115 +177,114 @@
             </ul>
         </nav>
 
-        <form action="" class="form" id="form">
-            <div id="address" class="address">
-                <h2 class="title">Profile</h2>
-                <!-- group: First Name -->
-                <div class="form__group" id="group__firstName">
-                    <label for="firstName" class="form__label">First Name :</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="firstName" id="firstName"
-                            placeholder="Alejandro Gaerste" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+        <form action="" class="address" id="address">
+            <h2 class="title">Address</h2>
+            <!-- group: First Name -->
+            <div class="form__group" id="group__firstName">
+                <label for="firstName" class="form__label">First Name :</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="firstName" id="firstName"
+                        placeholder="Alejandro Gaerste" required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+            </div>
 
-                <!-- group: Last Name -->
-                <div class="form__group" id="group__lastName">
-                    <label for="lastName" class="form__label">Last Name</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="lastName" id="lastName"
-                            placeholder="Alejandro Gaerste" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+            <!-- group: Last Name -->
+            <div class="form__group" id="group__lastName">
+                <label for="lastName" class="form__label">Last Name</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="lastName" id="lastName" placeholder="Alejandro Gaerste"
+                        required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
+            </div>
 
-                <!-- group:  Birthday-->
-                <div class="form__group" id="group__birthday">
-                    <label for="birthday" class="form__label">Birthday</label>
-                    <div class="form__user-input">
-                        <input type="date" class="form-input" name="birthday" id="birthday" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <!-- <p class="form__input-error"></p> -->
+            <!-- group:  Birthday-->
+            <div class="form__group" id="group__birthday">
+                <label for="birthday" class="form__label">Birthday</label>
+                <div class="form__user-input">
+                    <input type="date" class="form-input" name="birthday" id="birthday" required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <!-- <p class="form__input-error"></p> -->
+            </div>
 
-                <!-- group:  Address 1-->
-                <div class="form__group" id="group__address1">
-                    <label for="address1" class="form__label">Address 1</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="address1" id="address1"
-                            placeholder="Rua da street 210" required>
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            <!-- group:  Address 1-->
+            <div class="form__group" id="group__address1">
+                <label for="address1" class="form__label">Address 1</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="address1" id="address1" placeholder="Rua da street 210"
+                        required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            </div>
 
-                <!-- group:  Address 2-->
-                <div class="form__group" id="group__address2">
-                    <label for="address2" class="form__label">Address 2</label>
-                    <div class="form__user-input">
-                        <input type="text" class="form-input" name="address2" id="address2"
-                            placeholder="Rua da street 210">
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            <!-- group:  Address 2-->
+            <div class="form__group" id="group__address2">
+                <label for="address2" class="form__label">Address 2</label>
+                <div class="form__user-input">
+                    <input type="text" class="form-input" name="address2" id="address2" placeholder="Rua da street 210">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have from 1 to 50 digits</p>
+            </div>
 
-                <!-- group:  Postal Code-->
-                <div class="form__group" id="group__postalCode">
-                    <label for="postalCode" class="form__label">Postal Code</label>
-                    <div class="form__user-input">
-                        <input type="number" class="form-input" name="postalCode" id="postalCode" placeholder="21000">
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="form__input-error">The user must have uo to 5 digits and no empty spaces</p>
+            <!-- group:  Postal Code-->
+            <div class="form__group" id="group__postalCode">
+                <label for="postalCode" class="form__label">Postal Code</label>
+                <div class="form__user-input">
+                    <input type="number" class="form-input" name="postalCode" id="postalCode" placeholder="21000"
+                        required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
+                <p class="form__input-error">The user must have uo to 5 digits and no empty spaces</p>
+            </div>
 
-                <!-- group:  Country-->
-                <div class="form__group" id="group__country">
-                    <label for="country" class="form__label">Country</label>
-                    <div class="form__user-input">
-                        <select id="countries" name='country' required>
-                            <option value="Andorra">Andorra</option>
-                            <option value="España">España</option>
-                            <option value="Francia">Francia</option>
-                            <option value="Alemania">Alemania</option>
-                            <option value="Grecia">Grecia</option>
-                        </select>
+            <!-- group:  Country-->
+            <div class="form__group" id="group__country">
+                <label for="country" class="form__label">Country</label>
+                <div class="form__user-input">
+                    <select id="countries" name='country' required>
+                        <option value="Andorra">Andorra</option>
+                        <option value="España">España</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="Grecia">Grecia</option>
+                    </select>
 
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div>
-                </div>
-
-                <!-- group:  Phone-->
-                <div class="form__group" id="group__phone">
-                    <label for="phone" class="form__label">Phone</label>
-                    <div class="form__user-input">
-                        <select id="countries" name='country' required>
-                            <option value="AND">+376</option>
-                            <option value="ESP">+34</option>
-                            <option value="FRA">+33</option>
-                            <option value="DEU">+49</option>
-                            <option value="GRC">+30</option>
-                        </select>
-                        <input type="tel" class="form-input" name="phone" id="phone"
-                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Heyo chica tú número">
-                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
-                    </div><br>
-                    <!-- <p class="form__input-error">The user must have 9 digits and no empty spaces</p> -->
-                    <label for="regular-address"> This is my regular address</label>
-                    <input type="checkbox" id="regular-address" name="regular-address" value="regular-address">
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
             </div>
+
+            <!-- group:  Phone-->
+            <div class="form__group" id="group__phone">
+                <label for="phone" class="form__label">Phone</label>
+                <div class="form__user-input">
+                    <select id="countries" name='country' required>
+                        <option value="AND">+376</option>
+                        <option value="ESP">+34</option>
+                        <option value="FRA">+33</option>
+                        <option value="DEU">+49</option>
+                        <option value="GRC">+30</option>
+                    </select>
+                    <input type="tel" class="form-input" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                        placeholder="Heyo chica tú número" required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+                </div><br>
+                <!-- <p class="form__input-error">The user must have 9 digits and no empty spaces</p> -->
+                <label for="regular-address"> This is my regular address</label>
+                <input type="checkbox" id="regular-address" name="regular-address" value="regular-address">
+            </div>
         </form>
+
         <!-- container for the buttons -->
         <div class="form__button-baseline">
             <!-- button clear form delete value -->
             <div class="form__group form__group-btn-clear">
-                <button type="reset" class="form__btn-clear">Clear form</button>
+                <button id="resetAddress" class="form__btn-clear" onclick="resetForm('address')">Clear form</button>
             </div>
             <!-- button next -->
             <div class="form__group form__group-btn-next">
@@ -286,7 +292,7 @@
                     onclick="show('form-shipping', 'form-address')">Next</button>
             </div>
         </div>
-        <div class="sideright" >
+        <div class="sideright">
             <p>You started registering</p>
             <p><b><span class="time"></span></b><b>minutes ago.</b></p>
             <br>
@@ -294,7 +300,7 @@
         </div>
     </div>
 
-    <div class="form-shipping" id='form-shipping' hidden>
+    <div class="form-shipping" id='form-shipping'>
 
         <nav class="form-header">
             <ul id="progressbar">
@@ -307,9 +313,8 @@
 
         <section class="content">
             <div class="sideleft">
-                <h2 class="sh">Shipping</h2>
                 <h1 class="sh">Shipping type</h1>
-                <form class="formshipping" action="GET">
+                <form class="formshipping" id="form" action="GET">
                     <div class="inputalign">
                         <input type="radio" name="shipment" id="shipfree">
                         <label for="shipfree">Free shipment(72H)</label>
@@ -333,7 +338,7 @@
                     <label for="selecting" class="selecting">Select image <i class="fa-light fa-file"></i></label>
                     <input type="file" name="selecting" id="selecting">
                 </form>
-                <div class="sideright" >
+                <div class="sideright">
                     <p>You started registering</p>
                     <p><b><span class="time"></span></b><b>minutes ago.</b></p>
                     <br>
@@ -357,22 +362,23 @@
                     onclick="show('form-finish', 'form-shipping')">Next</button>
             </div>
         </div>
-        <div class="sideright" >
+        <div class="sideright">
             <p>You started registering</p>
             <p><b><span class="time"></span></b><b>minutes ago.</b></p>
             <br>
             <p>Hurry up!</p>
         </div>
     </div>
+
     <!-- LAST STEP (FINISH) -->
     <div class="form-finish" id="form-finish">
         <nav class="form-header">
-        <ul id="progressbar">
-            <li class="active">Profile</li>
-            <li class="active">Address</li>
-            <li class="active">Shipping</li>
-            <li class="active">Finish</li>
-        </ul>
+            <ul id="progressbar">
+                <li class="active">Profile</li>
+                <li class="active">Address</li>
+                <li class="active">Shipping</li>
+                <li class="active">Finish</li>
+            </ul>
         </nav>
         <div class="completed-order" id="completed-order" hidden>
             <h2>Your order is complete!</h2>
@@ -397,10 +403,12 @@
                         <p>and <b>31 de julio de 2020</b></p>
                     </div>
                 </div>
-                <input type="checkbox" name="finish-conditions" id="finishConditions">
+                <input type="checkbox" name="finish-conditions" id="finishConditions" onchange="enableBuy()">
                 <label for="finsih-conditions">I have read and I accept the terms and conditions.</label>
                 <p class="warning-conditions">Please accept the terms and conditions</p>
-                <button class="form__btn-next" type="submit" onclick="show('completed-order', '')"> Buy now</button>
+                <button class="form__btn-checkout" id="form__btn-checkout" type="submit"
+                    onclick="show('shopping-store', 'form-finish')" disabled> Buy
+                    now</button>
             </div>
             <div class="order-prices">
                 <h4>Your order</h4>
@@ -409,7 +417,7 @@
                 <p>Total: <b>24.54€</b> </p>
             </div>
         </div>
-        <div class="sideright" >
+        <div class="sideright">
             <p>You started registering</p>
             <p><b><span class="time"></span></b><b>minutes ago.</b></p>
             <br>

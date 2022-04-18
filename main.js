@@ -44,7 +44,7 @@ let showEveryMinute = setInterval (function () {
     if (timeMinutes===5){
         clearInterval(showEveryMinute);
     }
-},60000);
+},6000);
 function show5Seconds(){
     setTimeout(function(){
         intervalTimer.style.display="none";
