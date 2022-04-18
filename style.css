@@ -176,8 +176,13 @@ footer {
 }
 
 .sideright {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20%;
+    opacity: 0.5;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .sideright form {
