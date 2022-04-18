@@ -173,7 +173,7 @@
                 <label for="firstName" class="form__label">First Name :</label>
                 <div class="form__user-input">
                     <input type="text" class="form-input" name="firstName" id="firstName"
-                        placeholder="Alejandro Gaerste">
+                        placeholder="Alejandro Gaerste" required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
@@ -183,7 +183,7 @@
             <div class="form__group" id="group__lastName">
                 <label for="lastName" class="form__label">Last Name</label>
                 <div class="form__user-input">
-                    <input type="text" class="form-input" name="lastName" id="lastName" placeholder="Alejandro Gaerste">
+                    <input type="text" class="form-input" name="lastName" id="lastName" placeholder="Alejandro Gaerste" required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The user must have from 1 to 20 digits and no empty spaces</p>
@@ -192,8 +192,8 @@
             <!-- group:  Birthday-->
             <div class="form__group" id="group__birthday">
                 <label for="birthday" class="form__label">Birthday</label>
-                <div class="form__user-input">
-                    <input type="date" class="form-input" name="birthday" id="birthday">
+                <div class="form__user-input" >
+                    <input type="date" class="form-input" name="birthday" id="birthday" required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <!-- <p class="form__input-error"></p> -->
@@ -203,7 +203,7 @@
             <div class="form__group" id="group__address1">
                 <label for="address1" class="form__label">Address 1</label>
                 <div class="form__user-input">
-                    <input type="text" class="form-input" name="address1" id="address1" placeholder="Rua da street 210">
+                    <input type="text" class="form-input" name="address1" id="address1" placeholder="Rua da street 210" required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The user must have from 1 to 50 digits</p>
@@ -222,8 +222,8 @@
             <!-- group:  Postal Code-->
             <div class="form__group" id="group__postalCode">
                 <label for="postalCode" class="form__label">Postal Code</label>
-                <div class="form__user-input">
-                    <input type="number" class="form-input" name="postalCode" id="postalCode" placeholder="21000">
+                <div class="form__user-input" >
+                    <input type="number" class="form-input" name="postalCode" id="postalCode" placeholder="21000" required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div>
                 <p class="form__input-error">The user must have uo to 5 digits and no empty spaces</p>
@@ -233,7 +233,7 @@
             <div class="form__group" id="group__country">
                 <label for="country" class="form__label">Country</label>
                 <div class="form__user-input">
-                    <select id="countries" name='country'>
+                    <select id="countries" name='country' required>
                         <option value="Andorra">Andorra</option>
                         <option value="España">España</option>
                         <option value="Francia">Francia</option>
@@ -257,7 +257,7 @@
                         <option value="GRC">+30</option>
                     </select>
                     <input type="tel" class="form-input" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                        placeholder="Heyo chica tú número">
+                        placeholder="Heyo chica tú número" required>
                     <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                 </div><br>
                 <!-- <p class="form__input-error">The user must have 9 digits and no empty spaces</p> -->
