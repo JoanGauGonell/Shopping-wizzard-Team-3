@@ -37,18 +37,25 @@
 }
 
 .form__input-error {
-    font-size: 14px;
+    font-size: 16px;
+    margin-top: 7px;
     margin-bottom: 0;
-    display: none;
+    box-shadow: 3px 0px 15px rgba(163, 163, 163, 0.4);
+    background-color: #ccc;
+    color: #bb2929;
+    height: 25px;
+    line-height: 10px;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-left: 15px;
+    /* display: none;  */
 }
-.form__input-error-activo {
-    display: block;
-}
+
 .form__mesage  {
     font-size: 20px;
     text-align: center;
     margin-top: 1rem;
-    width: 100%;
+    margin: 15px;
     background-color: #bb2929 ;
     border-radius: 3px;
     box-shadow: 3px 0px 15px rgba(163, 163, 163, 0.4);
@@ -61,18 +68,8 @@
 .form__mesage p {
     margin: 0;
 }
-.form__mesage-activo {
-    display: block;
-}
 
-/* icons inputs "X" */
-.form__validation-state {
-    position: absolute;
-    left: 200px;
-    margin-top: 5.5px;
-    z-index: 100;
-    opacity: 0;
-}
+
 /* form inputs style */
 .form__user-input input {
     background: #fff;
@@ -118,14 +115,4 @@
     width: 60px;
 }
 
-/* form validations */
-.form__group-correct .form__validation-state {
-    color: #1ed12d;
-    opacity: 1;
-}
-
-.form__group-incorrect .form__validation-state {
-    color: #bb2929;
-    opacity: 1;
-}
 
