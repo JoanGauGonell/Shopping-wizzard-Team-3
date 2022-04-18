@@ -66,10 +66,32 @@ const formValues = {
     phone: Number
 }
 
+
+
 // TIMER
 const time = document.getElementById('time');
 let countdown = setTimeout;
-// TIMER
+
+const intervalTimer = document.querySelector(".sideright");
+const minutesTime= document.querySelector(".time");
+let timeMinutes = 0;
+
+let showEveryMinute = setInterval (function () {
+    intervalTimer.style.display="block";
+    show5Seconds();
+    timeMinutes++;
+    minutesTime.textContent = timeMinutes+" ";
+    if (timeMinutes===5){
+        clearInterval(showEveryMinute);
+    }
+},6000);
+
+function show5Seconds(){
+    setTimeout(function(){
+        intervalTimer.style.display="none";
+    },5000)
+}
+// TIMER END
 
 formProfile.addEventListener('submit', function (event) {
     e.preventDefault();
@@ -170,3 +192,5 @@ function validateFields(expression, input, field) {
         incorrect(field);
     }
 }
+
+

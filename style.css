@@ -193,14 +193,23 @@ footer {
 }
 
 .sideright {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20%;
+    opacity: 1;
+    border: 2px solid rgb(172, 172, 172);
+    margin-top: 50px;
+    margin-right: 20%;
+    padding: 50px;
+    height: fit-content;
+    background-color: rgb(230, 230, 230);
 }
 
-.sideright form {
+/* .sideright form {
     display: flex;
     flex-direction: column;
-}
+} */
 
 #selecting {
     width: 0.1px;
@@ -326,15 +335,6 @@ footer {
 .selectimg {
     margin-top: 20px;
     margin-bottom: 80px;
-}
-
-.sideright {
-    border: 2px solid rgb(172, 172, 172);
-    margin-top: 50px;
-    margin-right: 20%;
-    padding: 50px;
-    height: fit-content;
-    background-color: rgb(230, 230, 230);
 }
 
 label[for="selecting"] {
