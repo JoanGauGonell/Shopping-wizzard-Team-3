@@ -47,7 +47,7 @@ function enableBuy() {
 
 const expressionsProfile = {
     username: /^[a-zA-Z0-9\_\-]{5,20}$/,
-    email: /^[[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-.]+]{5,20}$/, // number, characters + @ + numbers, character + . + numbers,characters
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-.]+$/, // number, characters + @ + numbers, character + . + numbers,characters
     password: /^.{4,12}$/,
     password2: /^.{4,12}$/
 }
@@ -126,10 +126,12 @@ function validateForms(event) {
             validateFields(expressionsProfile.username, event.target, 'user');
             break;
         case "email":
+            console.log("email:",event.target.value);
             validateFields(expressionsProfile.email, event.target, 'email');
             break;
         case "password":
             validateFields(expressionsProfile.password, event.target, 'password');
+            validatePassword(event.target, 'password1', formValues.password);
             formValues.password = event.target.value;
             break;
         case "password2":
@@ -185,6 +187,10 @@ function incorrect(field) {
 }
 
 function validatePassword(input, field, password1) {
+    if (field == 'password1') {
+        if (input.value != password1)
+            incorrect('password2');
+    } else
     if (input.value == password1) {
         correct(field);
     } else {
