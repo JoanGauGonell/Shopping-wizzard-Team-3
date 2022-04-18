@@ -1,10 +1,16 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Pacifico&family=Work+Sans:wght@200&display=swap");
+
 /* General style */
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Chakra Petch", sans-serif;
+    font-family: "Pacifico", cursive;
+    font-family: "Work Sans", sans-serif;
     margin: 0 0;
     padding: 0 0;
     color: black;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* container style of the main  */
@@ -19,7 +25,7 @@
 .nav-header {
     background-color: rgb(219, 219, 219);
     padding: 40px 0;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 600;
     text-align: start;
     padding-left: 20px;
@@ -40,17 +46,15 @@ footer {
     height: 90px;
     border: 1.5px solid black;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 7px;
 }
 
-.small-img img {
-    margin: 3px;
-    border: 1px solid #17202A;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 80px;
-}
+
 
 .focus-img img {
-    height: 620px;
+    margin-top: 45px;
+    height: 420px;
     width: 420px;
     margin-left: 20%;
 }
@@ -85,18 +89,31 @@ footer {
     width: 100%;
 }
 
+.shirt-color {
+    display: flex;
+    flex-direction: column;
+}
+
+.shirt__color-img {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .shirt-color img {
     width: 40px;
     margin: 7px;
 }
 
 .button-buy {
-    width: 200px;
+    width: 100px;
     border-radius: 5px;
     color: aliceblue;
     background-color: black;
     padding: 15px 15px;
-    font-weight: 600;
+}
+
+.button-buy {
+    font-weight: 700;
     font-size: 15px;
 }
 
@@ -121,7 +138,7 @@ footer {
 #progressbar li {
     list-style-type: none;
     color: rgb(2, 2, 2);
-    font-size: 20px;
+    font-size: 23px;
     width: 23.33%;
     float: left;
     position: relative;
@@ -146,7 +163,7 @@ footer {
 /*progressbar connectors*/
 #progressbar li:after {
     position: absolute;
-    content: '';
+    content: "";
     width: 100%;
     height: 20px;
     background: rgb(90, 90, 90);
@@ -169,11 +186,10 @@ footer {
 
 /* SHIPPING FORM */
 .content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30%;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .sideright {
@@ -195,33 +211,45 @@ footer {
     z-index: -1;
 }
 
+#giftmsg {
+    width: 400px;
+    border: 2px black solid;
+    resize: none;
+    border-radius: 5px;
+}
+
 /* END SHIPPING */
 
 
 /* FINISH CARD */
-.form-finish{
+.form-finish {
     display: none;
     background-color: rgb(235, 235, 235);
 }
-.purchase_order{
+
+.purchase_order {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.completed-order{
+
+.completed-order {
     margin: 40px 30px 0 160px;
 }
-.purchase{
+
+.purchase {
     margin: 40px 30px 0 160px;
     width: 80%;
     background-color: white;
     border-radius: 5px;
     padding: 50px;
 }
-.purchase p{
+
+.purchase p {
     margin-top: 20px;
     font-size: 20px;
 }
-.order-prices{
+
+.order-prices {
     margin: 40px 30px 0 20%;
     width: 20%;
     background-color: white;
@@ -229,40 +257,69 @@ footer {
     padding: 50px;
     height: 30%;
 }
-.order-prices p{
+
+.order-prices p {
     margin-bottom: 20px;
     font-size: 20px;
 }
-.order-prices h4{
+
+.order-prices h4 {
     font-size: 30px;
     margin-bottom: 20px;
 }
-.purchase img{
+
+.purchase img {
     margin-right: 60px;
 }
 
-.shirt-card{
+.shirt-card {
     display: flex;
     flex-direction: row;
     margin-bottom: 80px;
 }
-.purchase-color{
+
+.purchase-color {
     display: flex;
     align-items: baseline;
 }
-#color-square{
+
+#color-square {
     background-color: rgb(0, 0, 0);
     width: 40px;
     height: 30px;
     margin-left: 30px;
 }
-.warning-conditions{
+
+.warning-conditions {
     background-color: rgb(248, 211, 211);
     color: rgb(184, 3, 3);
     margin: 20px 0;
     padding: 15px 10px;
     border-radius: 10px;
 }
+
+.gift {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_shipping {
+    display: flex;
+    justify-content: right;
+}
+
+.sh {
+    margin: 20px 0;
+}
+
+.formshipping input {
+    margin-bottom: 30px;
+}
+
+.formshipping textarea {
+    margin: 20px 0;
+}
+
 /* END */
 
 
@@ -286,7 +343,7 @@ label[for="selecting"] {
     border: 2px black solid;
     border-radius: 5px;
     display: inline-block;
-    transition: all .5s;
+    transition: all 0.5s;
     cursor: pointer;
     padding: 15px 40px !important;
     width: 300px;
@@ -298,7 +355,7 @@ label[for="selecting"] {
 }
 
 .sideleft {
-    margin-left: 300px
+    margin-left: 50px;
 }
 
 #clearform {
