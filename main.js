@@ -36,7 +36,7 @@ const intervalTimer = document.querySelector(".sideright");
 const minutesTime= document.querySelector(".time");
 let timeMinutes = 0;
 
-let showEveryMinute = setInterval (function () {
+let showEveryMinute = setInterval (function timer() {
     intervalTimer.style.display="block";
     show5Seconds();
     timeMinutes++;
