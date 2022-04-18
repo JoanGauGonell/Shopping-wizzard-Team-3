@@ -72,6 +72,13 @@ footer {
 
 .button-buy {
     margin-top: 50px;
+    width: 100px;
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: black;
+    padding: 15px 15px;
+    font-weight: 700;
+    font-size: 15px;
 }
 
 .shirt-color p {
@@ -103,26 +110,6 @@ footer {
     width: 40px;
     margin: 7px;
 }
-
-.button-buy {
-    width: 100px;
-    border-radius: 5px;
-    color: aliceblue;
-    background-color: black;
-    padding: 15px 15px;
-}
-
-.button-buy {
-    font-weight: 700;
-    font-size: 15px;
-}
-
-.button-buy:disabled {
-    background: #999;
-    color: #555;
-    cursor: not-allowed;
-}
-
 /* FORMS */
 
 /* PROGRESS BAR */
