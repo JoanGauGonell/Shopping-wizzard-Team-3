@@ -1,16 +1,22 @@
 /* general style for the form */
 .form-profile {
     padding: 0 0;
-    margin: 0 0;
+    margin: auto;
     text-decoration: none;
     max-height: 10rem;
+    display: none;
 }
+
+
+
 .form {
     display: flex;
     flex-direction: column;
     margin-bottom: 3rem;
     margin-top: 3rem;
+    margin-left: 1rem;
 }
+
 .title {
     margin-left: 11px;
 }
@@ -18,30 +24,75 @@
 .form__button-baseline {
     display: flex;
     justify-content: end;
-    flex-direction: row;
     background-color: rgb(220, 219, 219);
+    align-items: flex-end;
 }
+
 /* text style */
-.form__label{
-    font-size: 11px;
+.form__label {
+    font-weight: 700;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
 }
+
 .form__input-error {
-    font-size: 11px;
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    box-shadow: 3px 0px 15px rgba(163, 163, 163, 0.4);
+    background-color: #ccc;
+    color: #bb2929;
+    height: 25px;
+    line-height: 10px;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-left: 15px;
+    /* display: none;  */
 }
-.form__mesage p{
-    font-size: 13px;
+
+.form__mesage  {
+    font-size: 20px;
     text-align: center;
     margin-top: 1rem;
+    margin: 15px;
+    background-color: #bb2929 ;
+    border-radius: 3px;
+    box-shadow: 3px 0px 15px rgba(163, 163, 163, 0.4);
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    display: none;
 }
+
+.form__mesage p {
+    margin: 0;
+}
+
+
 /* form inputs style */
 .form__user-input input {
-    border: 1.3px solid black;
+    background: #fff;
+    border: 3px solid transparent;
+    height: 25px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+}
+.form__user-input input:focus {
+    border: 3px solid #0075ff;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    outline: none;
+}
+.form__user-input input {
+    border: 1px solid;
     border-radius: 3px;
 }
- .form__user-input input::-webkit-input-placeholder{
-    font-size: 10px;
-    padding-left: 3px;
+
+.form__user-input input::-webkit-input-placeholder {
+    font-size: 12px;
+    padding-left: 1px;
 }
+
 /* form groups */
 .form__group {
     margin: 12px;
@@ -63,3 +114,5 @@
     height: 25px;
     width: 60px;
 }
+
+
