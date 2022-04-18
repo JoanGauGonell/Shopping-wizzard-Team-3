@@ -1,11 +1,36 @@
-/* general style for the form */
+/* general style for the profile form */
 .form-profile {
     padding: 0 0;
     margin: auto;
     text-decoration: none;
     max-height: 10rem;
     display: none;
-    border: 1px solid black;
+}
+
+/* general style for the address form */
+.form-address {
+    padding: 0 0;
+    margin: auto;
+    text-decoration: none;
+    max-height: 10rem;
+    display: none;
+}
+
+
+/* SHIPPING FORM */
+
+/* general style for the shipping form */
+.form-shipping {
+    /* padding: 0 0;
+    margin: auto;
+    text-decoration: none;
+    max-height: 10rem; */
+    display: none;
+}
+
+.form-finish{
+    display: none;
+    background-color: rgb(235, 235, 235);
 }
 
 .form {
@@ -13,6 +38,7 @@
     flex-direction: column;
     margin-bottom: 3rem;
     margin-top: 3rem;
+    margin-left: 1rem;
 }
 
 .title {
@@ -22,39 +48,47 @@
 .form__button-baseline {
     display: flex;
     justify-content: end;
-    /* flex-direction: row; */
     background-color: rgb(220, 219, 219);
     align-items: flex-end;
 }
 
 /* text style */
 .form__label {
-    display: block;
     font-weight: 700;
     padding: 10px;
-    font-size: 11px;
+    font-size: 14px;
     cursor: pointer;
 }
 
 .form__input-error {
-    font-size: 11px;
+    font-size: 16px;
+    margin-top: 7px;
     margin-bottom: 0;
-    display: none; 
+    display: none;
 }
-.form__input-error-activo {
+.form__input-error-active {
     display: block;
 }
-.form__mesage p {
-    font-size: 13px;
+
+.form__mesage  {
+    font-size: 20px;
     text-align: center;
     margin-top: 1rem;
+    margin: 15px;
+    background-color: #bb2929 ;
+    border-radius: 3px;
+    box-shadow: 3px 0px 15px rgba(163, 163, 163, 0.4);
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    display: none;
 }
 
-/* icons inputs "X" */
-.form__validation-state {
-    position: absolute;
-    left: 140px;
+.form__mesage p {
+    margin: 0;
 }
+
+
 /* form inputs style */
 .form__user-input input {
     background: #fff;
@@ -63,19 +97,19 @@
     line-height: 45px;
     padding: 0 40px 0 10px;
 }
-.form__input:focus {
+.form__user-input input:focus {
     border: 3px solid #0075ff;
-    outline: none;
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    outline: none;
 }
 .form__user-input input {
-    border: 1.3px solid black;
+    border: 1px solid;
     border-radius: 3px;
 }
 
 .form__user-input input::-webkit-input-placeholder {
-    font-size: 10px;
-    padding-left: 3px;
+    font-size: 12px;
+    padding-left: 1px;
 }
 
 /* form groups */
@@ -99,3 +133,30 @@
     height: 25px;
     width: 60px;
 }
+
+.form__btn-checkout {
+    background-color: black;
+    color: white;
+    border: 1.3px solid black;
+    border-radius: 4px;
+    height: 25px;
+    width: 60px;
+}
+
+.form__btn-checkout:disabled{
+    background: #999;
+    color: #555;
+    cursor: not-allowed;
+}
+
+/* form validations */
+.form__group-correct .form__validation-state {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.form__group-incorrect .form__validation-state {
+    color: #bb2929;
+    opacity: 1;
+}
+
