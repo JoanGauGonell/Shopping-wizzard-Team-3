@@ -161,14 +161,16 @@ let showEveryMinute = setInterval (function () {
     if (timeMinutes === 5) {
         clearInterval(showEveryMinute);
         document.location.reload();
-
-        
+        alert("Sorry! You exceded the Maximum time for buying this product");
        }
-       //if the buy button is pressed we also clear the interval
-       document.getElementById("button-buy").addEventListener("click", timeElapsed);
+       //if the buy button of the finish form is pressed we also clear the interval
+       document.getElementById("form__btn-checkout").addEventListener("click", clearing);
+       function clearing (){
+
        clearInterval(showEveryMinute);
+       }
     }    
-,6000);};
+,60000);};
 
 //We define a function to make disappair the timer after 5 seconds of showing it.
 
