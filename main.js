@@ -117,10 +117,15 @@ let showEveryMinute = setInterval (function () {
     minutesTime.textContent = timeMinutes + " ";
     if (timeMinutes === 5) {
         clearInterval(showEveryMinute);
+        document.location.reload();
+
+        
+       }
     }    
-},60000);};
+,6000);};
 
 //We define a function to make disappair the timer after 5 seconds of showing it.
+
 function show5Seconds(){
     setTimeout(function(){
         intervalTimer.style.display="none";
@@ -153,8 +158,6 @@ function timeElapsed(){
     //The if is just to every 59 seconds increase 1 minute
         if (secondsElement > 59){
             minutesElement++ ; secondsElement = 0;}
-            console.log(minutesElement);
-            console.log(secondsElement);
     //And now we just have to print our result in the HTML
             minutsTaken.textContent=minutesElement;
             secondsTaken.textContent=secondsElement;
