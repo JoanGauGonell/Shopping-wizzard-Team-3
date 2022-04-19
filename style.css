@@ -45,7 +45,6 @@ footer {
     width: 70px;
     height: 90px;
     border: 1.5px solid black;
-    cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 7px;
 }
@@ -104,6 +103,7 @@ footer {
 .shirt__color-img {
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .shirt-color img {
