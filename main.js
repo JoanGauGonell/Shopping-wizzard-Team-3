@@ -1,7 +1,7 @@
 const profileInputs = document.querySelectorAll('#profile input');
 const formProfile = document.getElementById('profile');
 
-const addressInputs = document.querySelectorAll('#address input');
+const addressInputs = document.querySelectorAll('#address input ,select ');
 const formAddress = document.getElementById('address');
 
 const intervalTimer = document.querySelector(".sideright");
@@ -80,7 +80,7 @@ const expressionsAddress = {
     lastName: /^[a-zA-Z]{1,20}$/,
     birthday: /^\d{4}\-\d{2}\-\d{2}$/,
     address1: /^[a-zA-Z0-9/\s/ ]{1,50}$/,
-    address2: /^[a-zA-Z0-9/\s/ ]{1,50}$/,
+    address2: /^[a-zA-Z0-9/\s/ ]{0,50}$/,
     postalCode: /^[0-9]{1,5}$/,
     country: /^(?!----$).*/,
     phone: /^[1-9]{4,9}$/
@@ -142,17 +142,17 @@ profileInputs.forEach(function formInputs(input) {
 addressInputs.forEach(function formInputs(input) {
     input.addEventListener('keyup', validateForms);
     input.addEventListener('blur', validateForms);
+    input.addEventListener('change', validateForms);
 });
 
 function validateForms(event) {
-    console.log(event.target.name);
+    console.log(event);
     switch (event.target.name) {
         // PROFILE PAGE
         case "user":
             validateFields(expressionsProfile.username, event.target, 'user');
             break;
         case "email":
-            console.log("email:", event.target.value);
             validateFields(expressionsProfile.email, event.target, 'email');
             break;
         case "password":
@@ -166,14 +166,12 @@ function validateForms(event) {
 
             // ADDRESS PAGE
         case "firstName":
-            console.log("The address page firstName is:");
             validateFields(expressionsAddress.firstName, event.target, 'firstName');
             break;
         case "lastName":
             validateFields(expressionsAddress.lastName, event.target, 'lastName');
             break;
         case "birthday":
-            console.log("birthday: ", event.target.value);
             validateFields(expressionsAddress.birthday, event.target, 'birthday');
             break;
         case "address1":
@@ -186,6 +184,7 @@ function validateForms(event) {
             validateFields(expressionsAddress.postalCode, event.target, 'postalCode');
             break;
         case "country":
+            console.log(event.target);
             validateFields(expressionsAddress.country, event.target, 'country');
             break;
         case "phone":
