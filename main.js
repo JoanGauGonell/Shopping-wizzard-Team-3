@@ -122,7 +122,7 @@ let showEveryMinute = setInterval (function () {
         
        }
     }    
-,6000);};
+,60000);};
 
 //We define a function to make disappair the timer after 5 seconds of showing it.
 
