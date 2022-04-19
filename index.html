@@ -366,6 +366,7 @@
             <h2><b>Your order is complete!</b></h2>
             <p>Thank you for your order! <i class="fa-regular fa-party-horn"></i></p>
             <p>You compleated your order in <span id="minutesElapsed"></span> Minutes and <span id="secondsElapsed"> </span> Seconds</p>
+            <button class="button-buy" onclick=" document.location.reload()">Main page</button>
         </div>
         <div class="purchase_order">
             <div class="purchase">
@@ -387,7 +388,7 @@
                     </div>
                 </div>
                 <input type="checkbox" name="finish-conditions" id="finishConditions" onchange="enableBuy()">
-                <label for="finsih-conditions">I have read and I accept the terms and conditions. <br></label>
+                <label for="finishConditions">I have read and I accept the terms and conditions. <br></label>
                 <p class="warning-conditions" id="warning-conditions">Please accept the terms and conditions</p>
                 <button class="form__btn-checkout" id="form__btn-checkout" type="submit"
                     onclick="show('completed-order', 'warning-conditions')" disabled> Buy

@@ -153,7 +153,12 @@ document.getElementById("button-buy").addEventListener("click", timer);
 //We define a function to show the timer every minute
 function timer(){
 let showEveryMinute = setInterval (function () {
-
+       //if the buy button of the finish form is pressed we also clear the interval
+       document.getElementById("form__btn-checkout").addEventListener("click", clearing);
+       function clearing (){
+       clearInterval(showEveryMinute);
+       intervalTimer.style.display="none";
+       }
     intervalTimer.style.display="block";
     show5Seconds();
     timeMinutes++;
@@ -163,14 +168,10 @@ let showEveryMinute = setInterval (function () {
         document.location.reload();
         alert("Sorry! You exceded the Maximum time for buying this product");
        }
-       //if the buy button of the finish form is pressed we also clear the interval
-       document.getElementById("form__btn-checkout").addEventListener("click", clearing);
-       function clearing (){
 
-       clearInterval(showEveryMinute);
        }
-    }    
-,60000);};
+       
+,6000);};
 
 //We define a function to make disappair the timer after 5 seconds of showing it.
 
