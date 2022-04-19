@@ -23,24 +23,23 @@
 
     <div class="shopping-store" id="shopping-store">
 
-        <div class="small-img">
+        <div class="small-img" id="smallImg">
             <img src="assets/cami-negra2.jpg" alt="" onmouseover="hover(this)">
             <img src="assets/cami-negra3.jpg" alt="" onmouseover="hover(this)">
-            <img src="assets/cami-negra4.jpg" alt="" onmouseover="hover(this)">
-            <img src="assets/cami-negra5.jpg" alt="" onmouseover="hover(this)">
             <img src="assets/cami-negra1.jpg" alt="" onmouseover="hover(this)">
+
         </div>
 
-        <div class="focus-img">
+        <div class="focus-img" id="focusImg">
             <img src="assets/cami-negra1.jpg" alt="">
         </div>
 
         <div class="product-details">
 
             <div class="product-specifications">
-                <h2><span id="colorString">Brown</span> t-shirt</h2>
+                <h2>t-shirt</h2>
                 <p><b>Price</b></p>
-                <h2>14,55€</h2>
+                <h2 id="shirtPrice">14,55€</h2>
             </div>
 
             <div class="shirt-size">
@@ -56,26 +55,16 @@
             <div class="shirt-color">
                 <p><b>Color:</b></p>
                 <div class="shirt__color-img">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
-                    <img src="assets/cami-negra1.jpg" alt="">
+                    <img src="assets/cami-negra1.jpg" alt="" id="black" onclick="hover(this)">
+                    <img src="assets/amarilla_camiseta.jpeg" alt="" id="yellow" onclick="hover(this)">
+                    <img src="assets/beige_camiseta.jpeg" alt=""id="beige" onclick="hover(this)">
+                    <img src="assets/roja_camiseta.jpeg" alt="" id="red" onclick="hover(this)">
+                    <img src="assets/blanco_basico_sin_diseno.jpeg" alt="" id="white" onclick="hover(this)">
+                    <img src="assets/rosa_camiseta.jpeg" alt="" id="rosa" onclick="hover(this)">
                 </div>
             </div>
 
             <button class="button-buy" id="button-buy" onclick=" show('form-profile', 'shopping-store')">Buy</button>
-
         </div>
     </div>
 

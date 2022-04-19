@@ -1,5 +1,5 @@
-const profileInputs = document.querySelectorAll('#profile input');
-const formProfile = document.getElementById('profile');
+const profileInputs = document.querySelectorAll("#profile input");
+const formProfile = document.getElementById("profile");
 
 const addressInputs = document.querySelectorAll('#address input ,select ');
 const formAddress = document.getElementById('address');
@@ -16,18 +16,55 @@ document.getElementById('country').addEventListener("change", countrySelect);
 // document.getElementById('button-buy').addEventListener('click', show());
 
 function show(shown, hidden) {
-    document.getElementById(shown).style.display = "grid";
-    document.getElementById(hidden).style.display = "none";
-    document.getElementById('footer').style.display = "none";
-    document.getElementById('nav-header').style.display = "none";
+  document.getElementById(shown).style.display = "grid";
+  document.getElementById(hidden).style.display = "none";
+  document.getElementById("footer").style.display = "none";
+  document.getElementById("nav-header").style.display = "none";
+}
+// Images selector and array of images
+function imagesContainer(smallImg) {
+  let focusImg = document.querySelectorAll("#smallImg img");
+  focusImg.forEach((e) => {
+    switch (smallImg.id) {
+      case "red":
+        e.src = "/assets/roja_camiseta.jpeg";
+        break;
+      case "black":
+        e.src = "assets/cami-negra1.jpg";
+        break;
+      case "rosa":
+        e.src = "assets/rosa_camiseta.jpeg";
+        break;
+      case "white":
+        e.src = "assets/blanco_basico_sin_diseno.jpeg";
+        break;
+      case "beige":
+        e.src = "assets/beige_camiseta.jpeg";
+        break;
+      case "yellow":
+        e.src = "assets/amarilla_camiseta.jpeg";
+        break;
+      default:
+        break;
+    }
+  });
+  selectProduct.colorShirt = smallImg.id;
+  console.log(selectProduct.colorShirt);
 }
 
 function hover(element) {
-    document.querySelector('.focus-img img').setAttribute('src', element.getAttribute('src'));
+  document
+    .querySelector(".focus-img img")
+    .setAttribute("src", element.getAttribute("src"));
+  imagesContainer(element);
 }
+// End of the functions of the images
+// add price
+
+
 
 function resetForm(tag) {
-    document.getElementById(tag).reset();
+  document.getElementById(tag).reset();
 }
 
 function enableBuy() {
@@ -89,18 +126,24 @@ const expressionsAddress = {
 // ^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$
 
 const formValues = {
-    username: String,
-    email: String,
-    password: String,
-    firstName: String,
-    lastName: String,
-    birthday: Date,
-    address1: String,
-    address2: String,
-    postalCode: Number,
-    country: Selection,
-    phone: Number
-}
+  username: String,
+  email: String,
+  password: String,
+  firstName: String,
+  lastName: String,
+  birthday: Date,
+  address1: String,
+  address2: String,
+  postalCode: Number,
+  country: Selection,
+  phone: Number,
+};
+
+const selectProduct = {
+  price: Number,
+  colorShirt: String,
+  size: String,
+};
 
 // TIMER ALERT EVERY MINUTE
 
@@ -121,8 +164,11 @@ let showEveryMinute = setInterval (function () {
 
         
        }
+       //if the buy button is pressed we also clear the interval
+       document.getElementById("button-buy").addEventListener("click", timeElapsed);
+       clearInterval(showEveryMinute);
     }    
-,60000);};
+,6000);};
 
 //We define a function to make disappair the timer after 5 seconds of showing it.
 
@@ -151,7 +197,8 @@ function timeElapsed(){
     document.getElementById("form__btn-checkout").addEventListener("click", clear);
     //To stop counting seconds at the end we use a function to clear the interval
     function clear (){
-    clearInterval(showEverySecond);}
+    clearInterval(showEverySecond);
+       }}
     //The function secondsElapsed is to increse 1 second every interval
     function secondsElapsed(){
         secondsElement ++;
@@ -161,24 +208,24 @@ function timeElapsed(){
     //And now we just have to print our result in the HTML
             minutsTaken.textContent=minutesElement;
             secondsTaken.textContent=secondsElement;
-               }
+
 }
 
 
 //FINISH TIMER END
 
 
-formProfile.addEventListener('submit', function (event) {
-    e.preventDefault();
+formProfile.addEventListener("submit", function (event) {
+  e.preventDefault();
 });
 
-formAddress.addEventListener('submit', function (event) {
-    e.preventDefault();
+formAddress.addEventListener("submit", function (event) {
+  e.preventDefault();
 });
 
 profileInputs.forEach(function formInputs(input) {
-    input.addEventListener('keyup', validateForms);
-    input.addEventListener('blur', validateForms);
+  input.addEventListener("keyup", validateForms);
+  input.addEventListener("blur", validateForms);
 });
 
 addressInputs.forEach(function formInputs(input) {
@@ -239,19 +286,35 @@ function validateForms(event) {
 }
 
 function correct(field) {
-    document.getElementById(`group__${field}`).classList.remove('form__group-incorrect');
-    document.getElementById(`group__${field}`).classList.add('form__group-correct');
-    document.querySelector(`#group__${field} i`).classList.remove('fa-circle-xmark');
-    document.querySelector(`#group__${field} i`).classList.add('fa-check-circle');
-    document.querySelector(`#group__${field} .form__input-error`).classList.remove('form__input-error-active');
+  document
+    .getElementById(`group__${field}`)
+    .classList.remove("form__group-incorrect");
+  document
+    .getElementById(`group__${field}`)
+    .classList.add("form__group-correct");
+  document
+    .querySelector(`#group__${field} i`)
+    .classList.remove("fa-circle-xmark");
+  document.querySelector(`#group__${field} i`).classList.add("fa-check-circle");
+  document
+    .querySelector(`#group__${field} .form__input-error`)
+    .classList.remove("form__input-error-active");
 }
 
 function incorrect(field) {
-    document.getElementById(`group__${field}`).classList.remove('form__group-correct');
-    document.getElementById(`group__${field}`).classList.add('form__group-incorrect');
-    document.querySelector(`#group__${field} i`).classList.add('fa-circle-xmark');
-    document.querySelector(`#group__${field} i`).classList.remove('fa-check-circle');
-    document.querySelector(`#group__${field} .form__input-error`).classList.add('form__input-error-active');
+  document
+    .getElementById(`group__${field}`)
+    .classList.remove("form__group-correct");
+  document
+    .getElementById(`group__${field}`)
+    .classList.add("form__group-incorrect");
+  document.querySelector(`#group__${field} i`).classList.add("fa-circle-xmark");
+  document
+    .querySelector(`#group__${field} i`)
+    .classList.remove("fa-check-circle");
+  document
+    .querySelector(`#group__${field} .form__input-error`)
+    .classList.add("form__input-error-active");
 }
 
 function validatePassword(input, field, password1) {
@@ -267,9 +330,9 @@ function validatePassword(input, field, password1) {
 }
 
 function validateFields(expression, input, field) {
-    if (expression.test(input.value)) {
-        correct(field);
-    } else {
-        incorrect(field);
-    }
+  if (expression.test(input.value)) {
+    correct(field);
+  } else {
+    incorrect(field);
+  }
 }
