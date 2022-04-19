@@ -99,7 +99,37 @@ function show5Seconds(){
 }
 
 // TIMER END
+//REGISTRATION TIME
 
+
+document.getElementById("button-buy").addEventListener("click", timeElapsed);
+let minutesElement = 0;
+let secondsElement = 0;
+function timeElapsed(){
+
+    let showEverySecond = setInterval(secondsElapsed, 1000);
+    document.getElementById("form__btn-checkout").addEventListener("click", clear);
+    function clear (){
+    clearInterval(showEverySecond);}
+    function secondsElapsed(){
+        secondsElement ++;
+        if (secondsElement > 59){
+            minutesElement++ ; secondsElement = 0;}
+            console.log(minutesElement);
+            console.log(secondsElement);
+            minut.textContent=minutesElement;
+            secon.textContent=secondsElement;
+               }
+    let minut = document.getElementById("minutesElapsed");
+    let secon = document.getElementById("secondsElapsed")
+
+
+
+}
+
+
+//  if (s>59){m++;s=0;}
+//REGISTRATION TIME END
 formProfile.addEventListener('submit', function (event) {
     e.preventDefault();
 });
