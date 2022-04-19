@@ -76,7 +76,7 @@ const formValues = {
     phone: Number
 }
 
-// TIMER
+// TIMER ALERT EVERY MINUTE
 
 document.getElementById("button-buy").addEventListener("click", timer);
 
@@ -98,38 +98,42 @@ function show5Seconds(){
     },5000)
 }
 
-// TIMER END
-//REGISTRATION TIME
+// TIMER ALERT EVERY MINUTE END
 
+
+//FINISH TIMER
 
 document.getElementById("button-buy").addEventListener("click", timeElapsed);
 let minutesElement = 0;
 let secondsElement = 0;
-function timeElapsed(){
+let minutsTaken = document.getElementById("minutesElapsed");
+let secondsTaken = document.getElementById("secondsElapsed")
 
+function timeElapsed(){    
+    
     let showEverySecond = setInterval(secondsElapsed, 1000);
     document.getElementById("form__btn-checkout").addEventListener("click", clear);
+    //To stop counting seconds at the end we use a function to clear the interval
     function clear (){
     clearInterval(showEverySecond);}
+    //The function secondsElapsed is to increse 1 second every interval
     function secondsElapsed(){
         secondsElement ++;
+    //The if is just to every 59 seconds increase 1 minute
         if (secondsElement > 59){
             minutesElement++ ; secondsElement = 0;}
             console.log(minutesElement);
             console.log(secondsElement);
-            minut.textContent=minutesElement;
-            secon.textContent=secondsElement;
+    //And now we just have to print our result in the HTML
+            minutsTaken.textContent=minutesElement;
+            secondsTaken.textContent=secondsElement;
                }
-    let minut = document.getElementById("minutesElapsed");
-    let secon = document.getElementById("secondsElapsed")
-
-
-
 }
 
 
-//  if (s>59){m++;s=0;}
-//REGISTRATION TIME END
+//FINISH TIMER END
+
+
 formProfile.addEventListener('submit', function (event) {
     e.preventDefault();
 });
