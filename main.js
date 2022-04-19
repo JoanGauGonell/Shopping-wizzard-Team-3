@@ -9,14 +9,12 @@ const minutesTime = document.querySelector(".time");
 let timeMinutes = 0;
 let showEveryMinute = 0;
 
+let phoneCountry = document.getElementById('countriesID');
+document.getElementById('country').addEventListener("change", countrySelect);
 
-// document.getElementById('resetProfile').addEventListener("click", resetForm('#profile'));
-// document.getElementById('resetAddress').addEventListener("click", resetForm('#address'));
-
-// This doesn't work
+// document.getElementById('resetProfile').addEventListener("click", resetForm);
+// document.getElementById('resetAddress').addEventListener("click", resetForm);
 // document.getElementById('button-buy').addEventListener('click', show());
-// This doesn't work
-// document.getElementById('nextBtn').addEventListener('click', show('form-address', 'form-profile'));
 
 function show(shown, hidden) {
     document.getElementById(shown).style.display = "grid";
@@ -35,33 +33,61 @@ function resetForm(tag) {
 
 function enableBuy() {
     if (document.querySelector('#finishConditions').checked) {
-
         document.querySelector('#form__btn-checkout').disabled = false;
-
     } else if (!document.querySelector('#finishConditions').checked) {
-
         document.querySelector('#form__btn-checkout').disabled = true;
+    }
+}
 
+// COUNTRY TO PHONE number allocation
+function countrySelect(event) {
+    switch (event.target.value) {
+        case 'Andorra':
+            phoneCountry.value = 'AND';
+            break;
+        case 'España':
+            phoneCountry.value = 'ESP';
+            break;
+        case 'Francia':
+            phoneCountry.value = 'FRA';
+            break;
+        case 'Alemania':
+            phoneCountry.value = 'DEU';
+            break;
+        case 'Grecia':
+            phoneCountry.value = 'GRC';
+            break;
+        default:
+            break;
     }
 }
 
 const expressionsProfile = {
     username: /^[a-zA-Z0-9\_\-]{5,20}$/,
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-.]+$/, // number, characters + @ + numbers, character + . + numbers,characters
-    password: /^.{4,12}$/,
-    password2: /^.{4,12}$/
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-.]+[a-zA-Z0-9_.+-@\.]{1,50}$/, // number, characters + @ + numbers, character + . + numbers,characters
+    password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\_\$\#\€\.\-\+\*])[a-zA-Z0-9\_\$\#\€\.\-\+\*]{8,20}$/,
+    // One number
+    // One lowercase letter
+    // One uppercase letter
+    // One special character
+    // Min. length: 8
+    // Max. length: 20
+    password2: /^.{8,20}$/
 }
 
 const expressionsAddress = {
-    firstName: /^[a-zA-Z]{0,20}$/,
-    lastName: /^[a-zA-Z]{0,20}$/,
-    birthday: /^[0-9/-]{1,12}$/,
-    address1: /^[a-zA-Z0-9]{1,50}$/,
-    address2: /^[a-zA-Z0-9]{1,50}$/,
+    firstName: /^[a-zA-Z]{1,20}$/,
+    lastName: /^[a-zA-Z]{1,20}$/,
+    birthday: /^\d{4}\-\d{2}\-\d{2}$/,
+    address1: /^[a-zA-Z0-9/\s/ ]{1,50}$/,
+    address2: /^[a-zA-Z0-9/\s/ ]{1,50}$/,
     postalCode: /^[0-9]{1,5}$/,
-    country: /^.{4,12}$/, //HOW TO VALIDATE A SELECT IN HTML
+    country: /^(?!----$).*/,
     phone: /^[1-9]{4,9}$/
 }
+
+// /^[0-9/-]{1,12}$/,
+// ^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$
 
 const formValues = {
     username: String,
@@ -126,7 +152,7 @@ function validateForms(event) {
             validateFields(expressionsProfile.username, event.target, 'user');
             break;
         case "email":
-            console.log("email:",event.target.value);
+            console.log("email:", event.target.value);
             validateFields(expressionsProfile.email, event.target, 'email');
             break;
         case "password":
@@ -147,6 +173,7 @@ function validateForms(event) {
             validateFields(expressionsAddress.lastName, event.target, 'lastName');
             break;
         case "birthday":
+            console.log("birthday: ", event.target.value);
             validateFields(expressionsAddress.birthday, event.target, 'birthday');
             break;
         case "address1":
