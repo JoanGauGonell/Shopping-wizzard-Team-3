@@ -28,7 +28,7 @@
     display: none;
 }
 
-.form-finish{
+.form-finish {
     display: none;
     background-color: rgb(235, 235, 235);
 }
@@ -66,16 +66,17 @@
     margin-bottom: 0;
     display: none;
 }
+
 .form__input-error-active {
     display: block;
 }
 
-.form__mesage  {
+.form__mesage {
     font-size: 20px;
     text-align: center;
     margin-top: 1rem;
     margin: 15px;
-    background-color: #bb2929 ;
+    background-color: #bb2929;
     border-radius: 3px;
     box-shadow: 3px 0px 15px rgba(163, 163, 163, 0.4);
     height: 45px;
@@ -98,11 +99,13 @@
     line-height: 45px;
     padding: 0 40px 0 10px;
 }
+
 .form__user-input input:focus {
     border: 3px solid #0075ff;
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
     outline: none;
 }
+
 .form__user-input input {
     border: 1px solid;
     border-radius: 3px;
@@ -144,7 +147,7 @@
     width: 60px;
 }
 
-.form__btn-checkout:disabled{
+.form__btn-checkout:disabled {
     background: #999;
     color: #555;
     cursor: not-allowed;
@@ -160,4 +163,3 @@
     color: #bb2929;
     opacity: 1;
 }
-
