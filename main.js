@@ -78,8 +78,10 @@ const formValues = {
 
 // TIMER ALERT EVERY MINUTE
 
+//We use an event listener to start our timer when we begin to buy
 document.getElementById("button-buy").addEventListener("click", timer);
 
+//We define a function to show the timer every minute
 function timer(){
 let showEveryMinute = setInterval (function () {
 
@@ -92,6 +94,7 @@ let showEveryMinute = setInterval (function () {
     }    
 },60000);};
 
+//We define a function to make disappair the timer after 5 seconds of showing it.
 function show5Seconds(){
     setTimeout(function(){
         intervalTimer.style.display="none";
@@ -103,7 +106,9 @@ function show5Seconds(){
 
 //FINISH TIMER
 
+//We use an event listener to show the timer when we press the finish button
 document.getElementById("button-buy").addEventListener("click", timeElapsed);
+//We define the initial value of the timer
 let minutesElement = 0;
 let secondsElement = 0;
 let minutsTaken = document.getElementById("minutesElapsed");
