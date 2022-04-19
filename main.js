@@ -1,7 +1,7 @@
 const profileInputs = document.querySelectorAll('#profile input');
 const formProfile = document.getElementById('profile');
 
-const addressInputs = document.querySelectorAll('#address input ,select ');
+const addressInputs = document.querySelectorAll('#address input, select');
 const formAddress = document.getElementById('address');
 
 const intervalTimer = document.querySelector(".sideright");
@@ -79,8 +79,8 @@ const expressionsAddress = {
     firstName: /^[a-zA-Z]{1,20}$/,
     lastName: /^[a-zA-Z]{1,20}$/,
     birthday: /^\d{4}\-\d{2}\-\d{2}$/,
-    address1: /^[a-zA-Z0-9/\s/ ]{1,50}$/,
-    address2: /^[a-zA-Z0-9/\s/ ]{0,50}$/,
+    address1: /^[a-zA-Z0-9/\s\,\.\ª\º/ ]{1,50}$/,
+    address2: /^[a-zA-Z0-9/\s\,\.\ª\º/ ]{0,50}$/,
     postalCode: /^[0-9]{1,5}$/,
     country: /^(?!----$).*/,
     phone: /^[1-9]{4,9}$/
