@@ -7,7 +7,6 @@ const formAddress = document.getElementById('address');
 const intervalTimer = document.querySelector(".sideright");
 const minutesTime = document.querySelector(".time");
 let timeMinutes = 0;
-let showEveryMinute = 0;
 
 let phoneCountry = document.getElementById('countriesID');
 document.getElementById('country').addEventListener("change", countrySelect);
@@ -103,33 +102,72 @@ const formValues = {
     phone: Number
 }
 
-// TIMER
-// document.getElementById('button-buy').addEventListener("click", timer());
+// TIMER ALERT EVERY MINUTE
 
-showEveryMinute = setInterval(timer(), 6000);
+//We use an event listener to start our timer when we begin to buy
+document.getElementById("button-buy").addEventListener("click", timer);
 
+//We define a function to show the timer every minute
 function timer() {
-    console.log("timer:", showEveryMinute);
-    intervalTimer.style.display = "block";
-    show5Seconds();
-    timeMinutes++;
-    minutesTime.textContent = timeMinutes + " ";
-    if (timeMinutes === 5) {
-        clearInterval(showEveryMinute);
-    }
-},6000);
-function show5Seconds(){
-    setTimeout(function(){
-        intervalTimer.style.display="none";
-    },5000)
-}
+    let showEveryMinute = setInterval(function () {
+
+        intervalTimer.style.display = "block";
+        show5Seconds();
+        timeMinutes++;
+        minutesTime.textContent = timeMinutes + " ";
+        if (timeMinutes === 5) {
+            clearInterval(showEveryMinute);
+            document.location.reload();
+        }
+    }, 60000);
+};
+
+//We define a function to make disappair the timer after 5 seconds of showing it.
 
 function show5Seconds() {
     setTimeout(function () {
         intervalTimer.style.display = "none";
     }, 5000)
 }
-// TIMER END
+
+// TIMER ALERT EVERY MINUTE END
+
+
+//FINISH TIMER
+
+//We use an event listener to show the timer when we press the finish button
+document.getElementById("button-buy").addEventListener("click", timeElapsed);
+//We define the initial value of the timer
+let minutesElement = 0;
+let secondsElement = 0;
+let minutsTaken = document.getElementById("minutesElapsed");
+let secondsTaken = document.getElementById("secondsElapsed")
+
+function timeElapsed() {
+
+    let showEverySecond = setInterval(secondsElapsed, 1000);
+    document.getElementById("form__btn-checkout").addEventListener("click", clear);
+    //To stop counting seconds at the end we use a function to clear the interval
+    function clear() {
+        clearInterval(showEverySecond);
+    }
+    //The function secondsElapsed is to increse 1 second every interval
+    function secondsElapsed() {
+        secondsElement++;
+        //The if is just to every 59 seconds increase 1 minute
+        if (secondsElement > 59) {
+            minutesElement++;
+            secondsElement = 0;
+        }
+        //And now we just have to print our result in the HTML
+        minutsTaken.textContent = minutesElement;
+        secondsTaken.textContent = secondsElement;
+    }
+}
+
+
+//FINISH TIMER END
+
 
 formProfile.addEventListener('submit', function (event) {
     e.preventDefault();
