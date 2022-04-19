@@ -117,6 +117,11 @@ function timer() {
     if (timeMinutes === 5) {
         clearInterval(showEveryMinute);
     }
+},6000);
+function show5Seconds(){
+    setTimeout(function(){
+        intervalTimer.style.display="none";
+    },5000)
 }
 
 function show5Seconds() {

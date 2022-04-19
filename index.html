@@ -281,6 +281,26 @@
                 <label for="regular-address"> This is my regular address</label>
                 <input type="checkbox" id="regular-address" name="regular-address" value="regular-address">
             </div>
+
+            <!-- group:  Phone-->
+            <div class="form__group" id="group__phone">
+                <label for="phone" class="form__label">Phone</label>
+                <div class="form__user-input">
+                    <select id="countries" name='country' required>
+                        <option value="AND">+376</option>
+                        <option value="ESP">+34</option>
+                        <option value="FRA">+33</option>
+                        <option value="DEU">+49</option>
+                        <option value="GRC">+30</option>
+                    </select>
+                    <input type="tel" class="form-input" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                        placeholder="Heyo chica tú número" required>
+                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+                </div><br>
+                <!-- <p class="form__input-error">The user must have 9 digits and no empty spaces</p> -->
+                <label for="regular-address"> This is my regular address</label>
+                <input type="checkbox" id="regular-address" name="regular-address" value="regular-address">
+            </div>
         </form>
 
         <!-- container for the buttons -->
