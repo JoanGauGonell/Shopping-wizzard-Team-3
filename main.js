@@ -7,7 +7,6 @@ const formAddress = document.getElementById('address');
 const intervalTimer = document.querySelector(".sideright");
 const minutesTime = document.querySelector(".time");
 let timeMinutes = 0;
-let showEveryMinute = 0;
 
 
 // document.getElementById('resetProfile').addEventListener("click", resetForm('#profile'));
@@ -78,28 +77,27 @@ const formValues = {
 }
 
 // TIMER
-// document.getElementById('button-buy').addEventListener("click", timer());
 
-let showEveryMinute = setInterval (function timer() {
+document.getElementById("button-buy").addEventListener("click", timer);
+
+function timer(){
+let showEveryMinute = setInterval (function () {
+
     intervalTimer.style.display="block";
     show5Seconds();
     timeMinutes++;
     minutesTime.textContent = timeMinutes + " ";
     if (timeMinutes === 5) {
         clearInterval(showEveryMinute);
-    }
-},6000);
+    }    
+},60000);};
+
 function show5Seconds(){
     setTimeout(function(){
         intervalTimer.style.display="none";
     },5000)
 }
 
-function show5Seconds() {
-    setTimeout(function () {
-        intervalTimer.style.display = "none";
-    }, 5000)
-}
 // TIMER END
 
 formProfile.addEventListener('submit', function (event) {

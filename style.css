@@ -185,6 +185,10 @@ footer {
     right: 20px;
     top: 20%;
     opacity: 1;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: rgb(255, 162, 162);
+    z-index: 1;
     /* display: flex;
     flex-direction: column; */
 }
