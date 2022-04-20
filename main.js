@@ -144,7 +144,7 @@ const selectProduct = {
   colorShirt: String,
   size: String,
   };
-  console.log(colorShirt);
+
 function color_shirt(shirtColor){
     let focusColor = document.querySelectorAll("#shirtColor img");
     focusColor.forEach((e) =>{
@@ -165,16 +165,20 @@ function color_shirt(shirtColor){
             case "white":
                 selectProduct.colorShirt = "white";
                 break;
-            case "rosa":
+            case "pink":
                 selectProduct.colorShirt = "pink";
                 break;
             case "default":
                 break;
         }
     })
+   
 }
-let squareColor = document.getElementById("color-square");
-squareColor.style.backgroundColor = selectProduct.colorShirt;
+document.getElementById("button-buy").addEventListener("click", updateFinish);
+function updateFinish (){
+    let squareColor = document.getElementById("color-square");
+    squareColor.style.backgroundColor = selectProduct.colorShirt;
+}
 // shirtColor = document.getElementsByClassName("shirt__color-img");
 
 // TIMER ALERT EVERY MINUTE
@@ -203,7 +207,7 @@ let showEveryMinute = setInterval (function () {
 
        }
        
-,6000);};
+,60000);};
 
 //We define a function to make disappair the timer after 5 seconds of showing it.
 
@@ -243,6 +247,7 @@ function timeElapsed(){
     //And now we just have to print our result in the HTML
             minutsTaken.textContent=minutesElement;
             secondsTaken.textContent=secondsElement;
+
 
 }
 
