@@ -45,7 +45,6 @@ footer {
     width: 70px;
     height: 90px;
     border: 1.5px solid black;
-    cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 7px;
 }
@@ -104,6 +103,7 @@ footer {
 .shirt__color-img {
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .shirt-color img {
@@ -380,4 +380,12 @@ label[for="selecting"] {
     border-radius: 5px;
     margin-left: 30px;
     align-items: right;
+}
+#timeOutMessage{
+    display: none;
+    padding: 50px;
+    font-size: 20px;
+}
+#timeOutMessage p{
+    color: red;
 }

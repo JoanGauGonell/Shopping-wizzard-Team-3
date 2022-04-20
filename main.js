@@ -1,5 +1,5 @@
-const profileInputs = document.querySelectorAll('#profile input');
-const formProfile = document.getElementById('profile');
+const profileInputs = document.querySelectorAll("#profile input");
+const formProfile = document.getElementById("profile");
 
 const addressInputs = document.querySelectorAll('#address input, select');
 const formAddress = document.getElementById('address');
@@ -18,13 +18,50 @@ document.getElementById('country').addEventListener("change", countrySelect);
 function show(shown, hidden) {
     document.getElementById(shown).style.display = "grid";
     document.getElementById(hidden).style.display = "none";
-    document.getElementById('footer').style.display = "none";
-    document.getElementById('nav-header').style.display = "none";
+    document.getElementById("footer").style.display = "none";
+    document.getElementById("nav-header").style.display = "none";
+}
+// Images selector and array of images
+function imagesContainer(smallImg) {
+    let focusImg = document.querySelectorAll("#smallImg img");
+    focusImg.forEach((e) => {
+        switch (smallImg.id) {
+            case "red":
+                e.src = "/assets/roja_camiseta.jpeg";
+                break;
+            case "black":
+                e.src = "assets/cami-negra2.jpg";
+                break;
+            case "rosa":
+                e.src = "assets/rosa_camiseta.jpeg";
+                break;
+            case "white":
+                e.src = "assets/blanco_basico_sin_diseno.jpeg";
+                break;
+            case "beige":
+                e.src = "assets/beige_camiseta.jpeg";
+                break;
+            case "yellow":
+                e.src = "assets/amarilla_camiseta.jpeg";
+                break;
+            default:
+                break;
+        }
+    });
+    selectProduct.colorShirt = smallImg.id;
+    console.log(selectProduct.colorShirt);
 }
 
 function hover(element) {
-    document.querySelector('.focus-img img').setAttribute('src', element.getAttribute('src'));
+    document
+        .querySelector(".focus-img img")
+        .setAttribute("src", element.getAttribute("src"));
+    imagesContainer(element);
 }
+// End of the functions of the images
+// add price
+
+
 
 function resetForm(tag) {
     document.getElementById(tag).reset();
@@ -99,8 +136,14 @@ const formValues = {
     address2: String,
     postalCode: Number,
     country: Selection,
-    phone: Number
-}
+    phone: Number,
+};
+
+const selectProduct = {
+    price: Number,
+    colorShirt: String,
+    size: String,
+};
 
 // TIMER ALERT EVERY MINUTE
 
@@ -118,6 +161,14 @@ function timer() {
         if (timeMinutes === 5) {
             clearInterval(showEveryMinute);
             document.location.reload();
+            alert("Sorry! You exceded the Maximum time for buying this product");
+        }
+        //if the buy button of the finish form is pressed we also clear the interval
+        document.getElementById("form__btn-checkout").addEventListener("click", clearing);
+
+        function clearing() {
+
+            clearInterval(showEveryMinute);
         }
     }, 60000);
 };
@@ -151,35 +202,36 @@ function timeElapsed() {
     function clear() {
         clearInterval(showEverySecond);
     }
-    //The function secondsElapsed is to increse 1 second every interval
-    function secondsElapsed() {
-        secondsElement++;
-        //The if is just to every 59 seconds increase 1 minute
-        if (secondsElement > 59) {
-            minutesElement++;
-            secondsElement = 0;
-        }
-        //And now we just have to print our result in the HTML
-        minutsTaken.textContent = minutesElement;
-        secondsTaken.textContent = secondsElement;
+}
+//The function secondsElapsed is to increse 1 second every interval
+function secondsElapsed() {
+    secondsElement++;
+    //The if is just to every 59 seconds increase 1 minute
+    if (secondsElement > 59) {
+        minutesElement++;
+        secondsElement = 0;
     }
+    //And now we just have to print our result in the HTML
+    minutsTaken.textContent = minutesElement;
+    secondsTaken.textContent = secondsElement;
+
 }
 
 
 //FINISH TIMER END
 
 
-formProfile.addEventListener('submit', function (event) {
+formProfile.addEventListener("submit", function (event) {
     e.preventDefault();
 });
 
-formAddress.addEventListener('submit', function (event) {
+formAddress.addEventListener("submit", function (event) {
     e.preventDefault();
 });
 
 profileInputs.forEach(function formInputs(input) {
-    input.addEventListener('keyup', validateForms);
-    input.addEventListener('blur', validateForms);
+    input.addEventListener("keyup", validateForms);
+    input.addEventListener("blur", validateForms);
 });
 
 addressInputs.forEach(function formInputs(input) {
@@ -240,19 +292,35 @@ function validateForms(event) {
 }
 
 function correct(field) {
-    document.getElementById(`group__${field}`).classList.remove('form__group-incorrect');
-    document.getElementById(`group__${field}`).classList.add('form__group-correct');
-    document.querySelector(`#group__${field} i`).classList.remove('fa-circle-xmark');
-    document.querySelector(`#group__${field} i`).classList.add('fa-check-circle');
-    document.querySelector(`#group__${field} .form__input-error`).classList.remove('form__input-error-active');
+    document
+        .getElementById(`group__${field}`)
+        .classList.remove("form__group-incorrect");
+    document
+        .getElementById(`group__${field}`)
+        .classList.add("form__group-correct");
+    document
+        .querySelector(`#group__${field} i`)
+        .classList.remove("fa-circle-xmark");
+    document.querySelector(`#group__${field} i`).classList.add("fa-check-circle");
+    document
+        .querySelector(`#group__${field} .form__input-error`)
+        .classList.remove("form__input-error-active");
 }
 
 function incorrect(field) {
-    document.getElementById(`group__${field}`).classList.remove('form__group-correct');
-    document.getElementById(`group__${field}`).classList.add('form__group-incorrect');
-    document.querySelector(`#group__${field} i`).classList.add('fa-circle-xmark');
-    document.querySelector(`#group__${field} i`).classList.remove('fa-check-circle');
-    document.querySelector(`#group__${field} .form__input-error`).classList.add('form__input-error-active');
+    document
+        .getElementById(`group__${field}`)
+        .classList.remove("form__group-correct");
+    document
+        .getElementById(`group__${field}`)
+        .classList.add("form__group-incorrect");
+    document.querySelector(`#group__${field} i`).classList.add("fa-circle-xmark");
+    document
+        .querySelector(`#group__${field} i`)
+        .classList.remove("fa-check-circle");
+    document
+        .querySelector(`#group__${field} .form__input-error`)
+        .classList.add("form__input-error-active");
 }
 
 function validatePassword(input, field, password1) {

@@ -1,7 +1,6 @@
 /* general style for the profile form */
 .form-profile {
     padding: 0 0;
-    margin: auto;
     text-decoration: none;
     max-height: 10rem;
     display: none;
@@ -21,14 +20,20 @@
 
 /* general style for the shipping form */
 .form-shipping {
-    /* padding: 0 0;
+    padding: 0 0;
     margin: auto;
     text-decoration: none;
-    max-height: 10rem; */
+    max-height: 10rem; 
     display: none;
 }
 
-.form-finish {
+.gift textarea {
+    line-height: 25px;
+    padding-left: 5px;
+    font-size: large;
+}
+
+.form-finish{
     display: none;
     background-color: rgb(235, 235, 235);
 }
@@ -71,7 +76,7 @@
     display: block;
 }
 
-.form__mesage {
+.form__message  {
     font-size: 20px;
     text-align: center;
     margin-top: 1rem;
@@ -82,7 +87,7 @@
     height: 45px;
     line-height: 45px;
     padding: 0 15px;
-    display: none;
+    
 }
 
 .form__mesage p {
