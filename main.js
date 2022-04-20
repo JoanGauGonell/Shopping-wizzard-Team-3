@@ -140,10 +140,46 @@ const formValues = {
 };
 
 const selectProduct = {
-    price: Number,
-    colorShirt: String,
-    size: String,
-};
+  price: Number,
+  colorShirt: String,
+  size: String,
+  };
+
+function color_shirt(shirtColor){
+    let focusColor = document.querySelectorAll("#shirtColor img");
+    focusColor.forEach((e) =>{
+        switch (shirtColor.target.id){
+
+            case "black":
+                selectProduct.colorShirt = "black";
+                break;
+            case "yellow":
+                selectProduct.colorShirt = "yellow";
+                break;
+            case "beige":
+                selectProduct.colorShirt = "beige";
+                break;
+            case "red":
+                selectProduct.colorShirt = "red";
+                break;
+            case "white":
+                selectProduct.colorShirt = "white";
+                break;
+            case "pink":
+                selectProduct.colorShirt = "pink";
+                break;
+            case "default":
+                break;
+        }
+    })
+   
+}
+document.getElementById("button-buy").addEventListener("click", updateFinish);
+function updateFinish (){
+    let squareColor = document.getElementById("color-square");
+    squareColor.style.backgroundColor = selectProduct.colorShirt;
+}
+// shirtColor = document.getElementsByClassName("shirt__color-img");
 
 // TIMER ALERT EVERY MINUTE
 
@@ -151,27 +187,27 @@ const selectProduct = {
 document.getElementById("button-buy").addEventListener("click", timer);
 
 //We define a function to show the timer every minute
-function timer() {
-    let showEveryMinute = setInterval(function () {
+function timer(){
+let showEveryMinute = setInterval (function () {
+       //if the buy button of the finish form is pressed we also clear the interval
+       document.getElementById("form__btn-checkout").addEventListener("click", clearing);
+       function clearing (){
+       clearInterval(showEveryMinute);
+       intervalTimer.style.display="none";
+       }
+    intervalTimer.style.display="block";
+    show5Seconds();
+    timeMinutes++;
+    minutesTime.textContent = timeMinutes + " ";
+    if (timeMinutes === 5) {
+        clearInterval(showEveryMinute);
+        document.location.reload();
+        alert("Sorry! You exceded the Maximum time for buying this product");
+       }
 
-        intervalTimer.style.display = "block";
-        show5Seconds();
-        timeMinutes++;
-        minutesTime.textContent = timeMinutes + " ";
-        if (timeMinutes === 5) {
-            clearInterval(showEveryMinute);
-            document.location.reload();
-            alert("Sorry! You exceded the Maximum time for buying this product");
-        }
-        //if the buy button of the finish form is pressed we also clear the interval
-        document.getElementById("form__btn-checkout").addEventListener("click", clearing);
-
-        function clearing() {
-
-            clearInterval(showEveryMinute);
-        }
-    }, 60000);
-};
+       }
+       
+,60000);};
 
 //We define a function to make disappair the timer after 5 seconds of showing it.
 
@@ -214,6 +250,7 @@ function secondsElapsed() {
     //And now we just have to print our result in the HTML
     minutsTaken.textContent = minutesElement;
     secondsTaken.textContent = secondsElement;
+
 
 }
 

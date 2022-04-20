@@ -54,13 +54,13 @@
 
             <div class="shirt-color">
                 <p><b>Color:</b></p>
-                <div class="shirt__color-img">
+                <div class="shirt__color-img" id="shirtColor">
                     <img src="assets/cami-negra1.jpg" alt="" id="black" onclick="hover(this)">
                     <img src="assets/amarilla_camiseta.jpeg" alt="" id="yellow" onclick="hover(this)">
                     <img src="assets/beige_camiseta.jpeg" alt="" id="beige" onclick="hover(this)">
                     <img src="assets/roja_camiseta.jpeg" alt="" id="red" onclick="hover(this)">
                     <img src="assets/blanco_basico_sin_diseno.jpeg" alt="" id="white" onclick="hover(this)">
-                    <img src="assets/rosa_camiseta.jpeg" alt="" id="rosa" onclick="hover(this)">
+                    <img src="assets/rosa_camiseta.jpeg" alt="" id="pink" onclick="hover(this)">
                 </div>
             </div>
 
@@ -374,8 +374,8 @@
         <div class="completed-order" id="completed-order" hidden>
             <h2><b>Your order is complete!</b></h2>
             <p>Thank you for your order! <i class="fa-regular fa-party-horn"></i></p>
-            <p>You compleated your order in <span id="minutesElapsed"></span> Minutes and <span id="secondsElapsed">
-                </span> Seconds</p>
+            <p>You compleated your order in <span id="minutesElapsed"></span> Minutes and <span id="secondsElapsed"> </span> Seconds</p>
+            <button class="button-buy" onclick=" document.location.reload()">Main page</button>
         </div>
         <div class="purchase_order">
             <div class="purchase">
@@ -386,7 +386,7 @@
 
                     <div>
                         <h3>Brown t-shirt</h3>
-                        <p>Size: <b> M </b></p>
+                        <p>Size: <span id="size"> <b> M </b></span></p>
                         <div class="purchase-color">
                             <p>Color: <div id="color-square"></div>
                             </p>
@@ -397,7 +397,7 @@
                     </div>
                 </div>
                 <input type="checkbox" name="finish-conditions" id="finishConditions" onchange="enableBuy()">
-                <label for="finsih-conditions">I have read and I accept the terms and conditions. <br></label>
+                <label for="finishConditions">I have read and I accept the terms and conditions. <br></label>
                 <p class="warning-conditions" id="warning-conditions">Please accept the terms and conditions</p>
                 <button class="form__btn-checkout" id="form__btn-checkout" type="submit"
                     onclick="show('completed-order', 'warning-conditions')" disabled> Buy
