@@ -1,0 +1,151 @@
+/* general style for the profile form */
+.form-profile {
+    padding: 0 0;
+    text-decoration: none;
+    max-height: 10rem;
+    display: none;
+}
+
+/* general style for the address form */
+.form-address {
+    padding: 0 0;
+    margin: auto;
+    text-decoration: none;
+    max-height: 10rem;
+    display: none;
+}
+
+
+/* SHIPPING FORM */
+
+/* general style for the shipping form */
+.form-shipping {
+    padding: 0 0;
+    margin: auto;
+    text-decoration: none;
+    max-height: 10rem; 
+    display: none;
+}
+
+.gift textarea {
+    line-height: 25px;
+    padding-left: 5px;
+    font-size: large;
+}
+
+.form-finish{
+    display: none;
+    background-color: rgb(235, 235, 235);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.title {
+    margin-left: 11px;
+}
+
+.form__button-baseline {
+    display: flex;
+    justify-content: end;
+    background-color: rgb(220, 219, 219);
+    align-items: flex-end;
+}
+
+/* text style */
+.form__label {
+    font-weight: 700;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form__input-error {
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.form__input-error-active {
+    display: block;
+}
+
+/* form inputs style */
+.form__user-input input {
+    background: #fff;
+    border: 3px solid transparent;
+    height: 25px;
+    width: 200px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+}
+
+.form__user-input input:focus {
+    border: 3px solid #0075ff;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    outline: none;
+}
+
+.form__user-input input {
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.form__user-input input::-webkit-input-placeholder {
+    font-size: 12px;
+    padding-left: 1px;
+}
+
+/* form groups */
+.form__group {
+    margin: 12px;
+}
+
+/* buttons baseline style */
+.form__btn-clear {
+    width: 85px;
+    height: 25px;
+    border: 1.3px solid black;
+    border-radius: 4px;
+}
+
+.form__btn-next {
+    background-color: black;
+    color: white;
+    border: 1.3px solid black;
+    border-radius: 4px;
+    height: 25px;
+    width: 60px;
+}
+
+.form__btn-checkout {
+    background-color: black;
+    color: white;
+    border: 1.3px solid black;
+    border-radius: 4px;
+    height: 25px;
+    width: 60px;
+}
+
+.form__btn-checkout:disabled {
+    background: #999;
+    color: #555;
+    cursor: not-allowed;
+}
+
+/* form validations */
+.form__group-correct .form__validation-state {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.form__group-incorrect .form__validation-state {
+    color: #bb2929;
+    opacity: 1;
+}
