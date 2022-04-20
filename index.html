@@ -22,7 +22,7 @@
     </nav>
 
     <div class="shopping-store" id="shopping-store">
-        
+
         <div class="small-img" id="smallImg">
             <img src="assets/cami-negra2.jpg" alt="" onmouseover="hover(this)">
             <img src="assets/cami-negra3.jpg" alt="" onmouseover="hover(this)">
@@ -34,7 +34,7 @@
             <img src="assets/cami-negra1.jpg" alt="">
         </div>
 
-            <div class="product-details">
+        <div class="product-details">
 
             <div class="product-specifications">
                 <h2>t-shirt</h2>
@@ -42,55 +42,57 @@
                 <h2 id="shirtPrice">14,55€</h2>
             </div>
 
-                <div class="shirt-size">
-                    <select name="Size" id="shirtsize">
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                        <option value="XXL">XXL</option>
-                    </select>
-                </div>
+            <div class="shirt-size">
+                <select name="Size" id="shirtsize">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
 
             <div class="shirt-color">
                 <p><b>Color:</b></p>
                 <div class="shirt__color-img">
                     <img src="assets/cami-negra1.jpg" alt="" id="black" onclick="hover(this)">
                     <img src="assets/amarilla_camiseta.jpeg" alt="" id="yellow" onclick="hover(this)">
-                    <img src="assets/beige_camiseta.jpeg" alt=""id="beige" onclick="hover(this)">
+                    <img src="assets/beige_camiseta.jpeg" alt="" id="beige" onclick="hover(this)">
                     <img src="assets/roja_camiseta.jpeg" alt="" id="red" onclick="hover(this)">
                     <img src="assets/blanco_basico_sin_diseno.jpeg" alt="" id="white" onclick="hover(this)">
                     <img src="assets/rosa_camiseta.jpeg" alt="" id="rosa" onclick="hover(this)">
                 </div>
 
-            <button class="button-buy" id="button-buy" onclick=" show('form-profile', 'shopping-store')">Buy</button>
+                <button class="button-buy" id="button-buy"
+                    onclick=" show('form-profile', 'shopping-store')">Buy</button>
+            </div>
         </div>
-    </div>
 
-    <footer id='footer'>
-        <h4>Shop 2022</h4>
-    </footer>
+        <footer id='footer'>
+            <h4>Shop 2022</h4>
+        </footer>
 
-    <!-- form-profile -->
-    <div class="form-profile" id='form-profile'>
+        <!-- form-profile -->
+        <div class="form-profile" id='form-profile'>
 
-        <nav class="form-header">
-            <ul id="progressbar">
-                <li class="active">Profile</li>
-                <li>Address</li>
-                <li>Shipping</li>
-                <li>Finish</li>
-            </ul>
-        </nav>
+            <nav class="form-header">
+                <ul id="progressbar">
+                    <li class="active">Profile</li>
+                    <li>Address</li>
+                    <li>Shipping</li>
+                    <li>Finish</li>
+                </ul>
+            </nav>
 
-        <form action="" class="profile" id="profile">
-            <h2 class="title">Profile</h2>
-            <!-- group: username -->
-            <div class="form__group" id="group__user">
-                <label for="user" class="form__label">Username</label>
-                <div class="form__user-input">
-                    <input type="text" class="form-input" name="user" id="user" placeholder="Batman01023" required>
-                    <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+            <form action="" class="profile" id="profile">
+                <h2 class="title">Profile</h2>
+                <!-- group: username -->
+                <div class="form__group" id="group__user">
+                    <label for="user" class="form__label">Username</label>
+                    <div class="form__user-input">
+                        <input type="text" class="form-input" name="user" id="user" placeholder="Batman01023" required>
+                        <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+                    </div>
                 </div>
 
                 <!-- group:email -->
@@ -112,7 +114,8 @@
                             required>
                         <i class="form__validation-state fa-solid fa-circle-xmark"></i>
                     </div>
-                    <p class="form__input-error">The text must contain at least: one number, one uppercase letter, one
+                    <p class="form__input-error">The text must contain at least: one number, one uppercase letter,
+                        one
                         lowercase letter and one special character</p>
                 </div>
 
@@ -152,7 +155,6 @@
             </div>
         </div>
 
-        </div>
         <!-- form-address -->
         <div class="form-address" id='form-address'>
 
@@ -291,52 +293,53 @@
             <br>
             <p>Hurry up!</p>
         </div> -->
-    </div>
-    <!-- form-shipping -->
-    <div class="form-shipping" id='form-shipping'>
+        </div>
 
-        <nav class="form-header">
-            <ul id="progressbar">
-                <li class="active">Profile</li>
-                <li class="active">Address</li>
-                <li class="active">Shipping</li>
-                <li>Finish</li>
-            </ul>
-        </nav>
+        <!-- form-shipping -->
+        <div class="form-shipping" id='form-shipping'>
 
-        <section class="content">
-            <div class="sideleft">
-                <h1 class="sh">Shipping type</h1>
-                <form class="formshipping" id="form" action="GET" required>
-                    <div class="inputalign">
-                        <input type="radio" name="shipment" id="shipfree">
-                        <label for="shipfree">Free shipment(72H)</label>
-                    </div>
-                    <div class="inputalign">
-                        <input type="radio" name="shipment" id="shipextra">
-                        <label for="shipextra">Extra shipping (48H) <B>4,99€</B></label>
-                    </div>
-                    <div class="inputalign">
-                        <input type="radio" name="shipment" id="premium">
-                        <label for="premium">Premium (24H) <b>9,99€</b></label></div>
-                    <div class="inputalign">
-                        <input type="checkbox" name="gift" id="gift">
-                        <label for="gift">Is it a gift?</label>
-                    </div>
-                    <div class="gift">
-                        <label for="giftmsg">Gift message</label>
-                        <textarea name="giftmsg" id="giftmsg" cols="30" rows="10"></textarea>
-                    </div>
-                    <p>Gift wrapper image</p>
-                    <label for="selecting" class="selecting">Select image <i class="fa-light fa-file"></i></label>
-                    <input type="file" name="selecting" id="selecting">
-                </form>
-                <div class="sideright">
-                    <p>You started registering</p>
-                    <p><b><span class="time"></span></b><b>minutes ago.</b></p>
-                    <br>
-                    <p>Hurry up!</p>
-                </div> -->
+            <nav class="form-header">
+                <ul id="progressbar">
+                    <li class="active">Profile</li>
+                    <li class="active">Address</li>
+                    <li class="active">Shipping</li>
+                    <li>Finish</li>
+                </ul>
+            </nav>
+
+            <section class="content">
+                <div class="sideleft">
+                    <h1 class="sh">Shipping type</h1>
+                    <form class="formshipping" id="form" action="GET" required>
+                        <div class="inputalign">
+                            <input type="radio" name="shipment" id="shipfree">
+                            <label for="shipfree">Free shipment(72H)</label>
+                        </div>
+                        <div class="inputalign">
+                            <input type="radio" name="shipment" id="shipextra">
+                            <label for="shipextra">Extra shipping (48H) <B>4,99€</B></label>
+                        </div>
+                        <div class="inputalign">
+                            <input type="radio" name="shipment" id="premium">
+                            <label for="premium">Premium (24H) <b>9,99€</b></label></div>
+                        <div class="inputalign">
+                            <input type="checkbox" name="gift" id="gift">
+                            <label for="gift">Is it a gift?</label>
+                        </div>
+                        <div class="gift">
+                            <label for="giftmsg">Gift message</label>
+                            <textarea name="giftmsg" id="giftmsg" cols="30" rows="10"></textarea>
+                        </div>
+                        <p>Gift wrapper image</p>
+                        <label for="selecting" class="selecting">Select image <i class="fa-light fa-file"></i></label>
+                        <input type="file" name="selecting" id="selecting">
+                    </form>
+                    <div class="sideright">
+                        <p>You started registering</p>
+                        <p><b><span class="time"></span></b><b>minutes ago.</b></p>
+                        <br>
+                        <p>Hurry up!</p>
+                    </div> -->
                 </div>
             </section>
             <div class="form__button-baseline">
@@ -349,39 +352,23 @@
                         onclick="show('form-finish', 'form-shipping')">Next</button>
                 </div>
             </div>
-        </section>
-        <div class="form__button-baseline">
-            <div class="form__group form__group-btn-clear">
-                <button type="delete" class="form__btn-clear"> Clear form</button>
+            </section>
+            <div class="form__button-baseline">
+                <div class="form__group form__group-btn-clear">
+                    <button type="delete" class="form__btn-clear"> Clear form</button>
+                </div>
+                <!-- button next -->
+                <div class="form__group form__group-btn-next">
+                    <button type="submit" class="form__btn-next"
+                        onclick="show('form-finish', 'form-shipping')">Next</button>
+                </div>
             </div>
-            <!-- button next -->
-            <div class="form__group form__group-btn-next">
-                <button type="submit" class="form__btn-next"
-                    onclick="show('form-finish', 'form-shipping')">Next</button>
-            </div>
-        </div>
-        <div class="sideright">
-            <p>You started registering</p>
-            <p><b><span class="time"></span></b><b>minutes ago.</b></p>
-            <br>
-            <p>Hurry up!</p>
-        </div> -->
-    </div>
-
-    <!-- form-finish -->
-    <div class="form-finish" id="form-finish">
-        <nav class="form-header">
-            <ul id="progressbar">
-                <li class="active">Profile</li>
-                <li class="active">Address</li>
-                <li class="active">Shipping</li>
-                <li class="active">Finish</li>
-            </ul>
-        </nav>
-        <div class="completed-order" id="completed-order" hidden>
-            <h2><b>Your order is complete!</b></h2>
-            <p>Thank you for your order! <i class="fa-regular fa-party-horn"></i></p>
-            <p>You compleated your order in <span id="minutesElapsed"></span> Minutes and <span id="secondsElapsed"> </span> Seconds</p>
+            <div class="sideright">
+                <p>You started registering</p>
+                <p><b><span class="time"></span></b><b>minutes ago.</b></p>
+                <br>
+                <p>Hurry up!</p>
+            </div> -->
         </div>
 
         <!-- form-finish -->
@@ -445,19 +432,12 @@
                 <p>Premium Shipping: <b>9.99€</b></p>
                 <p>Total: <b>24.54€</b> </p>
             </div>
-            <!-- <div class="sideright"> -->
-            <!-- <div class="sideright">
-            <p>You started registering</p>
-            <p><b><span class="time"></span></b><b>minutes ago.</b></p>
-            <br>
-            <p>Hurry up!</p>
-        </div> -->
-        </div>
-        <div class="sideright">
-            <p>You started registering</p>
-            <p><b><span class="time"></span></b><b>minutes ago.</b></p>
-            <br>
-            <p>Hurry up!</p>
+            <div class="sideright">
+                <p>You started registering</p>
+                <p><b><span class="time"></span></b><b>minutes ago.</b></p>
+                <br>
+                <p>Hurry up!</p>
+            </div>
         </div>
 </body>
 
