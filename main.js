@@ -143,7 +143,39 @@ const selectProduct = {
   price: Number,
   colorShirt: String,
   size: String,
-};
+  };
+  console.log(colorShirt);
+function color_shirt(shirtColor){
+    let focusColor = document.querySelectorAll("#shirtColor img");
+    focusColor.forEach((e) =>{
+        switch (shirtColor.target.id){
+
+            case "black":
+                selectProduct.colorShirt = "black";
+                break;
+            case "yellow":
+                selectProduct.colorShirt = "yellow";
+                break;
+            case "beige":
+                selectProduct.colorShirt = "beige";
+                break;
+            case "red":
+                selectProduct.colorShirt = "red";
+                break;
+            case "white":
+                selectProduct.colorShirt = "white";
+                break;
+            case "rosa":
+                selectProduct.colorShirt = "pink";
+                break;
+            case "default":
+                break;
+        }
+    })
+}
+let squareColor = document.getElementById("color-square");
+squareColor.style.backgroundColor = selectProduct.colorShirt;
+// shirtColor = document.getElementsByClassName("shirt__color-img");
 
 // TIMER ALERT EVERY MINUTE
 
